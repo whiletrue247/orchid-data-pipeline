@@ -1,0 +1,16 @@
+{
+  "catalog": {
+    "collectionCount": 20,
+    "path": "objects/a525994a963c9b2f9f3eb87c29f4178ead04918847b566fe586d21852520baf4.json",
+    "sha256": "a525994a963c9b2f9f3eb87c29f4178ead04918847b566fe586d21852520baf4"
+  },
+  "contentVersion": "a525994a963c9b2f9f3eb87c29f4178ead04918847b566fe586d21852520baf4",
+  "deliveryPolicy": "verified-only",
+  "generatedAt": "2026-09-22T09:27:59Z",
+  "region": {
+    "languageTag": "zh-TW",
+    "regionCode": "TW"
+  },
+  "schemaVersion": 1,
+  "source": "orchid-discovery-v2"
+}

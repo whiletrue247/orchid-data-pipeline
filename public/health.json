@@ -1,0 +1,11 @@
+{
+  "checkedAt": "2026-09-22T09:32:20Z",
+  "collectionCount": 20,
+  "contentVersion": "a525994a963c9b2f9f3eb87c29f4178ead04918847b566fe586d21852520baf4",
+  "deliveryPolicy": "verified-only",
+  "excludedCollectionCount": 203,
+  "haltReason": "Upstream Retry-After cooldown is active.",
+  "halted": true,
+  "schemaVersion": 1,
+  "upstreamFailures": 0
+}
