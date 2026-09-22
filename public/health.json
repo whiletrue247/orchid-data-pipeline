@@ -1,11 +1,11 @@
 {
-  "checkedAt": "2026-09-22T09:35:47Z",
-  "collectionCount": 20,
-  "contentVersion": "a525994a963c9b2f9f3eb87c29f4178ead04918847b566fe586d21852520baf4",
+  "checkedAt": "2026-09-22T14:59:14Z",
+  "collectionCount": 32,
+  "contentVersion": "927ea68b91a7aa421d00a3e80885e3f549eae25b10024f8d30faa304084e829e",
   "deliveryPolicy": "verified-only",
-  "excludedCollectionCount": 203,
-  "haltReason": "Upstream Retry-After cooldown is active.",
-  "halted": true,
+  "excludedCollectionCount": 183,
+  "haltReason": null,
+  "halted": false,
   "schemaVersion": 1,
   "upstreamFailures": 0
 }
