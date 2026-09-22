@@ -8,7 +8,7 @@ on:
       - ".github/workflows/orchid-catalog.yml"
       - "Tools/OrchidPipeline/**"
   schedule:
-    - cron: "16 4,10,16,22 * * *"
+    - cron: "16 */2 * * *"
       timezone: "Asia/Taipei"
   workflow_dispatch:
     inputs:
@@ -68,9 +68,18 @@ jobs:
             --summary .build/orchid/summary.json \
             --region TW \
             --language zh-TW \
-            --vector-request-budget 24 \
+            --verified-only \
+            --max-pages 1 \
+            --vector-batch-size 4 \
+            --vector-request-budget 4 \
+            --playlist-batch-size 12 \
+            --request-budget 24 \
+            --track-max-age 48 \
             --minimum-collections 20 \
             --minimum-playlist-success-rate 0.8
+
+      - name: Validate the complete public graph
+        run: ruby Tools/OrchidPipeline/bin/validate_snapshot .build/orchid/public
 
       - name: Export build result
         id: summary

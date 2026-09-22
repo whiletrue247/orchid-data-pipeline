@@ -414,6 +414,80 @@ class OrchidPipelineTest < Minitest::Test
     end
   end
 
+  def test_verified_feed_rejects_missing_empty_and_unhydrated_collections
+    Dir.mktmpdir do |dir|
+      transport = FakeTransport.new
+      transport.handler = lambda do |request|
+        if request[:path] == "/api/getVector"
+          json_result({ "items" => %w[good gone empty unknown].map { |id| { "type" => "playlist", "ref" => id, "title" => id } } }, etag: "v")
+        elsif request[:path] == "/api/playlist"
+          case request[:query]["vectorId"]
+          when "gone" then json_result({ "error" => { "code" => 106, "message" => "No such vector found." } }, etag: "gone")
+          when "empty" then json_result({ "items" => [] }, etag: "empty")
+          else response_for(request, conditional: false)
+          end
+        else response_for(request, conditional: false)
+        end
+      end
+      output = File.join(dir, "public")
+      state = File.join(dir, "state.json")
+      summary = OrchidPipeline::Builder.new(transport: transport, output_directory: output, state_path: state,
+        verified_only: true, max_vectors: 1, max_pages_per_vector: 1, playlist_batch_size: 3,
+        minimum_collections: 1, logger: ->(_) {}).build
+      manifest = JSON.parse(File.read(File.join(output, "manifest.json")))
+      catalog = JSON.parse(File.read(File.join(output, manifest.dig("catalog", "path"))))
+      assert_equal(["good"], catalog["collections"].map { |x| x["id"] })
+      assert_equal("verified-only", manifest["deliveryPolicy"])
+      assert_equal(2, summary["unavailableCollectionCount"])
+      assert_equal(3, summary["excludedCollectionCount"])
+      assert_equal(1, catalog["collections"][0].dig("tracks", "trackCount"))
+      assert(File.exist?(File.join(output, "health.json")))
+      persisted = JSON.parse(File.read(state))
+      assert_nil(persisted.dig("resources", "playlist:gone"))
+      assert(persisted.dig("tombstones", "gone", "retryAt"))
+    end
+  end
+
+  def test_verified_feed_never_publishes_expired_cached_tracks_on_upstream_failure
+    Dir.mktmpdir do |dir|
+      transport = FakeTransport.new
+      transport.handler = ->(request) { response_for(request, conditional: false) }
+      time = Time.utc(2026, 9, 22)
+      options = { transport: transport, output_directory: File.join(dir, "public"), state_path: File.join(dir, "state.json"),
+        verified_only: true, max_vectors: 1, max_pages_per_vector: 1, minimum_collections: 1,
+        now: -> { time }, logger: ->(_) {} }
+      OrchidPipeline::Builder.new(**options).build
+      manifest = File.read(File.join(dir, "public", "manifest.json"))
+      time += 8 * 24 * 3600
+      transport.handler = lambda do |request|
+        raise OrchidPipeline::HTTPError, "temporary outage" if request[:path] == "/api/playlist"
+        response_for(request, conditional: true)
+      end
+      assert_raises(OrchidPipeline::QualityGateError) { OrchidPipeline::Builder.new(**options).build }
+      assert_equal(manifest, File.read(File.join(dir, "public", "manifest.json")))
+    end
+  end
+
+  def test_retry_after_survives_restart_and_makes_zero_requests
+    Dir.mktmpdir do |dir|
+      transport = FakeTransport.new
+      transport.handler = ->(request) { response_for(request, conditional: false) }
+      now = Time.utc(2026, 9, 22)
+      state = File.join(dir, "state.json")
+      options = { transport: transport, output_directory: File.join(dir, "public"), state_path: state,
+        verified_only: true, max_vectors: 1, max_pages_per_vector: 1, minimum_collections: 1,
+        now: -> { now }, logger: ->(_) {} }
+      OrchidPipeline::Builder.new(**options).build
+      data = JSON.parse(File.read(state))
+      data["retryAfterUntil"] = (now + 3600).iso8601
+      File.write(state, JSON.generate(data))
+      transport.handler = ->(_) { raise "No upstream request is allowed in cooldown" }
+      summary = OrchidPipeline::Builder.new(**options).build
+      assert_equal(true, summary["halted"])
+      assert_equal(1, summary["collectionCount"])
+    end
+  end
+
   private
 
   def build(transport, output, state, now: Time.utc(2026, 7, 10, 8, 16, 0))

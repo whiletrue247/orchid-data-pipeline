@@ -1,63 +1,71 @@
-# Orchid
+# Orchid Discovery
 
-Orchid moves upstream catalog discovery and collection metadata parsing out of the iOS launch path. It produces static, content-addressed JSON that can be published by GitHub Actions and consumed by the app without embedding GitHub credentials.
+The playlist delivery service for Music 日常. Maintained under **whiletrue247**.
 
-## Guarantees
+The server discovers current catalog entries, validates full track lists, and publishes
+immutable JSON. The iPhone downloads verified data and ranks playlists locally; it does
+not crawl historical catalog pages while a listener waits. Audio resolution/playback is
+separate and is not proxied, downloaded, or hosted by this repository.
 
-- One HTTP session, cookie jar, region, language, and `firstLaunch` value per run.
-- Conditional requests for vector and playlist resources using persisted ETags.
-- A hard per-run request budget, a separate vector allocation that preserves playlist capacity, and immediate stop on HTTP 429 with `Retry-After` reporting.
-- Rotating vector and playlist batches, with offset checkpoints for long vectors.
-- Canonical JSON and SHA-256 content identities.
-- Content-addressed playlist and catalog objects.
-- Ranking metadata derived from the vector membership already present in cached pages; this adds no source requests.
-- Quality gates before the latest manifest is replaced.
-- Cached source payload fallback when a previously healthy endpoint is temporarily unavailable.
-- No YouTube audio stream URLs, account cookies, or personal listening data in output.
+## Delivery architecture
 
-## Local Verification
+`scheduled sync → bounded upstream adapters → normalized source state → availability/age/dedup gates → immutable objects → manifest + health → CDN → iPhone cache + ranking`
+
+- Refresh the three current chart/latest/featured heads plus one rotating genre head.
+  Historical vector pages remain in migration state but are excluded from discovery.
+- Only publish playlists with a nonempty validated track resource. Every published
+  collection has a working JSON dependency; content hashes, IDs and counts are checked.
+  This validates metadata, not the global playability or licensing of every audio track.
+- Classify HTTP 200 application errors. Deleted/empty collections get a 24-hour retry
+  cooldown, and their cached track records are removed. Transient failures can reuse
+  previously verified records only within the 48-hour validation window.
+- Deduplicate identical track sets and use actual track counts in subtitles. Source IDs
+  remain stable so local favorites survive migration. A shared title is not an identity.
+- Run every two hours: at most four vector reads, twelve playlist reads, and 24 total
+  requests including retries. Space requests by at least one second. These conservative
+  starting limits follow an observed 429 during the September 22 live probe; adjust from
+  measured completion/freshness, not from the desire for a bigger catalog.
+- Persist Retry-After across runs. A cooldown run makes zero upstream calls. Never switch
+  accounts, hosts or endpoints to evade upstream limits.
+- At least 20 verified playlists must survive before replacing the manifest. A failed
+  publication retains the previous deployment. `health.json` records validation time,
+  exclusions, degraded state and the served content version even when content is unchanged.
+- The catalog is finite. The app can append new ranked cycles without pretending every
+  card is unique. A small healthy feed is preferred during recovery; coverage expands as
+  later bounded syncs validate more entries.
+
+## Validation and operation
 
 ```sh
 ruby Tools/OrchidPipeline/test/orchid_pipeline_test.rb
+ORCHID_SOURCE_URL='<configured upstream>' ruby Tools/OrchidPipeline/bin/build_orchid \
+  --output .build/orchid/public --state .build/orchid/source-state.json \
+  --summary .build/orchid/summary.json --verified-only --max-pages 1 \
+  --vector-batch-size 4 --vector-request-budget 4 --playlist-batch-size 12 \
+  --request-budget 24 --track-max-age 48 --minimum-collections 20
+ruby Tools/OrchidPipeline/bin/validate_snapshot .build/orchid/public
 ```
 
-Run a bounded live probe before a full crawl:
+Ruby 3.3 with Minitest is used in CI. One serialized workflow is the publisher. Public
+objects and normalized source state are checkpointed on `orchid-data`; only `public/`
+is deployed to Pages. This is a public repository: state must contain no credentials,
+session cookies or user behavior. The source URL is supplied as a repository secret.
 
-```sh
-ORCHID_SOURCE_URL="<upstream base URL>" ruby Tools/OrchidPipeline/bin/build_orchid \
-  --output .build/orchid/public \
-  --state .build/orchid/source-state.json \
-  --max-vectors 1 \
-  --max-pages 1 \
-  --minimum-collections 1
-```
+Current delivery is GitHub Pages for development validation. Production hosting and
+content provider contracts must be reviewed before commercial distribution. The static
+contract is portable to object storage/CDN; it does not require changing the iOS ranking
+engine. Provider authorization and API terms are separate from a successful HTTP response.
 
-Run the same command again to verify `304 Not Modified` reuse for unchanged resources.
+## Failure and recovery
 
-## Output
+- Failed sync / malformed JSON / too few eligible playlists: retain last manifest;
+  investigate the Action annotation and health age. Do not publish an empty feed.
+- 429: obey persisted cooldown; no immediate retry loop. Quality gates still apply.
+- Outdated feed (>24 hours without a successful validation): degraded operating condition;
+  investigate GitHub email verification, disabled jobs, source limits and parse failures.
+- Bad release: redeploy the preceding `orchid-data` public snapshot with force_deploy.
+  Immutable objects keep previous manifests resolvable. Retain old objects until a
+  separately designed retention/rollback window permits garbage collection.
 
-- `manifest.json`: atomic latest-version pointer.
-- `objects/<sha256>.json`: immutable catalog and playlist payloads.
-- `source-state.json`: private crawler state containing ETags and normalized source payloads. This file must not be served to the app.
-
-The app should cache the last known good manifest and catalog, check the manifest frequently with HTTP caching, and only download content-addressed objects it does not already have.
-
-## GitHub Actions
-
-`.github/workflows/orchid-catalog.yml` runs at 04:16, 10:16, 16:16, and 22:16 in `Asia/Taipei`. It:
-
-1. Tests the builder.
-2. Restores source state and immutable objects from the `orchid-data` branch.
-3. Refreshes up to four vector sources with at most 24 page requests, then hydrates up to eight playlists within a 40-request total budget.
-4. Pushes state only when ETags or normalized content changed.
-5. Deploys the public directory only when content changed.
-
-The complete catalog is accumulated across runs. New collection artwork can appear before every playlist is hydrated; a collection receives a `tracks` object only after its playlist payload has passed parsing. The app must keep its direct-source fallback for a collection that has not been hydrated yet.
-
-Collections may include optional `rankingMetadata`. `topics` contains normalized, namespaced values such as `genre:cpop` or `mood:party`; `editorialSignals` contains values such as `charts`, `latest`, or `featured`. Duplicate collections merge metadata from every known vector membership. Unknown vectors are preserved in the catalog but do not receive guessed labels.
-
-The first successful run creates `orchid-data`. GitHub Pages deployment is intentionally disabled until the repository variable `ORCHID_PAGES_ENABLED` is set to `true` and Pages is configured to use GitHub Actions. This prevents a new repository from failing before its publication policy is chosen.
-
-The workflow also requires the repository secret `ORCHID_SOURCE_URL`. Keep the upstream hostname out of committed files and logs.
-
-For a private source repository, confirm that the resulting Pages URL is anonymously readable before wiring it into the app. Never put a GitHub token in the iOS bundle. If the Pages URL is private, publish the sanitized `public` directory to a separate public data repository instead.
+The September 22 migration starts with the successful bounded local probe and its active
+upstream cooldown. The first cloud run publishes that validated snapshot without crawling.

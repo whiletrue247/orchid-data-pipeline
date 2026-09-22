@@ -22,6 +22,8 @@ options = {
 
 OptionParser.new do |parser|
   parser.banner = "Usage: build_orchid [options]"
+  parser.on("--verified-only", "Publish only recently validated, nonempty playlists from current vector heads") { options[:verified_only] = true }
+  parser.on("--track-max-age HOURS", Float, "Maximum playlist validation age in hours") { |value| options[:track_max_age] = value * 3600 }
   parser.on("--source-url URL", "Upstream base URL (or ORCHID_SOURCE_URL)") { |value| options[:source_url] = value }
   parser.on("--output DIR", "Public snapshot directory") { |value| options[:output_directory] = value }
   parser.on("--state FILE", "Persistent source state file") { |value| options[:state_path] = value }

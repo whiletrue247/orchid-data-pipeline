@@ -20,6 +20,7 @@ module OrchidPipeline
     end
   end
   class QualityGateError < Error; end
+  class UnavailableCollection < Error; end
 
   HTTPResult = Struct.new(:status, :headers, :body, keyword_init: true)
 
@@ -293,7 +294,7 @@ module OrchidPipeline
       region_code:,
       language_tag:,
       browser_language:,
-      minimum_request_interval: 0.25,
+      minimum_request_interval: 1.0,
       maximum_requests: 40,
       maximum_response_bytes: 10 * 1024 * 1024,
       sleeper: ->(seconds) { sleep(seconds) },
@@ -482,10 +483,14 @@ module OrchidPipeline
       playlist_batch_size: 8,
       minimum_collections: 20,
       minimum_playlist_success_rate: 0.8,
+      verified_only: false,
+      track_max_age: 7 * 24 * 60 * 60,
       first_launch: nil,
       now: -> { Time.now.utc },
       logger: ->(message) { puts(message) }
     )
+      @verified_only = verified_only
+      @track_max_age = track_max_age
       @transport = transport
       @output_directory = File.expand_path(output_directory)
       @state_path = File.expand_path(state_path)
@@ -519,6 +524,10 @@ module OrchidPipeline
       playlist_stats = crawl_playlists(collections)
       enforce_playlist_gate!(playlist_stats)
       enriched_collections = enrich_collections(collections)
+      if @verified_only && enriched_collections.length < @minimum_collections
+        write_json_atomic(@state_path, @state)
+        raise QualityGateError, "Only #{enriched_collections.length} verified nonempty collections; retaining the last published catalog."
+      end
       coverage = {
         "vectorCount" => vectors.length,
         "cachedVectorCount" => cached_vector_count(vectors),
@@ -541,16 +550,30 @@ module OrchidPipeline
           "schemaVersion" => 1,
           "contentVersion" => content_version,
           "generatedAt" => @now.call.iso8601,
-          "source" => "orchid-v1",
+          "source" => @verified_only ? "orchid-discovery-v2" : "orchid-v1",
+          "deliveryPolicy" => @verified_only ? "verified-only" : "legacy",
           "region" => { "regionCode" => @region_code, "languageTag" => @language_tag },
           "catalog" => catalog_object.merge("collectionCount" => enriched_collections.length)
         }
         write_json_atomic(File.join(@output_directory, "manifest.json"), manifest)
       end
 
+      if @verified_only
+        write_json_atomic(File.join(@output_directory, "health.json"), {
+          "schemaVersion" => 1, "checkedAt" => @now.call.iso8601,
+          "contentVersion" => content_version, "deliveryPolicy" => "verified-only",
+          "collectionCount" => enriched_collections.length,
+          "excludedCollectionCount" => collections.length - enriched_collections.length,
+          "upstreamFailures" => vector_stats.fetch("failures") + playlist_stats.fetch("failures"),
+          "halted" => !@halt.nil?, "haltReason" => @halt
+        })
+      end
       write_json_atomic(@state_path, @state)
       @summary = {
-        "changed" => changed,
+        "changed" => changed || @verified_only,
+        "contentChanged" => changed,
+        "excludedCollectionCount" => collections.length - enriched_collections.length,
+        "unavailableCollectionCount" => playlist_stats.fetch("unavailable", 0),
         "contentVersion" => content_version,
         "vectorCount" => vectors.length,
         "refreshedVectorCount" => selected_vectors.length,
@@ -570,6 +593,12 @@ module OrchidPipeline
     private
 
     def discover_vectors
+      retry_at = @state["retryAfterUntil"]
+      if retry_at && Time.iso8601(retry_at) > @now.call
+        @halt = "Upstream Retry-After cooldown is active."
+        return Array(@state.dig("discovery", "vectorIDs"))
+      end
+      @state.delete("retryAfterUntil")
       result = @transport.request(
         method: "POST",
         path: "/api/page/getSearch",
@@ -699,6 +728,12 @@ module OrchidPipeline
         )
         stats[outcome] += 1 if stats.key?(outcome)
         stats["successes"] += 1
+      rescue UnavailableCollection => error
+        @state["resources"].delete(key)
+        @state["tombstones"] ||= {}
+        @state["tombstones"][identifier] = { "retryAt" => (@now.call + 24 * 60 * 60).iso8601 }
+        stats["unavailable"] = stats.fetch("unavailable", 0) + 1
+        @logger.call("Excluded unavailable playlist #{identifier}.")
       rescue RateLimitError, RequestBudgetExceeded => error
         halt!(error)
         break
@@ -710,10 +745,21 @@ module OrchidPipeline
     end
 
     def enrich_collections(collections)
-      collections.map do |collection|
+      seen_tracks = {}
+      collections.filter_map do |collection|
         identifier = collection.fetch("id")
-        tracks = @state.dig("resources", "playlist:#{identifier}", "payload")
-        next collection unless tracks.is_a?(Array)
+        resource = @state.dig("resources", "playlist:#{identifier}")
+        tracks = resource&.fetch("payload", nil)
+        if @verified_only
+          next if tombstoned?(identifier)
+          next unless tracks.is_a?(Array) && !tracks.empty? && fresh_resource?(resource)
+          fingerprint = CanonicalJSON.sha256(tracks.map { |track| track.fetch("id") }.sort)
+          next if seen_tracks[fingerprint]
+          seen_tracks[fingerprint] = true
+          collection = collection.merge("subtitle" => "#{tracks.length} 首")
+        else
+          next collection unless tracks.is_a?(Array) && !tracks.empty?
+        end
 
         object = write_object({ "schemaVersion" => 1, "collectionID" => identifier, "tracks" => tracks })
         collection.merge("tracks" => object.merge("trackCount" => tracks.length))
@@ -725,6 +771,7 @@ module OrchidPipeline
       pages = @state.fetch("resources", {}).each_with_object([]) do |(key, resource), result|
         match = key.match(/\Avector:(.+):(\d+):(\d+)\z/)
         next unless match && allowed[match[1]]
+        next if @verified_only && match[2].to_i != 0
 
         result << [vector_ids.index(match[1]), match[1], match[2].to_i, resource.fetch("payload", [])]
       end
@@ -776,6 +823,15 @@ module OrchidPipeline
     end
 
     def select_vector_batch(vector_ids)
+      if @verified_only
+        hot = vector_ids.first([3, @vector_batch_size].min)
+        rest = vector_ids - hot
+        count = [@vector_batch_size - hot.length, 0].max
+        cursor = @state.fetch("crawl", {}).fetch("discoveryVectorCursor", 0) % [rest.length, 1].max
+        rotated = rest.length.times.map { |i| rest[(cursor + i) % rest.length] }
+        @state["crawl"]["discoveryVectorCursor"] = cursor + count
+        return hot + rotated.first(count)
+      end
       return vector_ids if vector_ids.length <= @vector_batch_size
 
       incomplete = vector_ids.select do |identifier|
@@ -794,6 +850,15 @@ module OrchidPipeline
     end
 
     def selected_playlists(collections)
+      if @verified_only
+        candidates = collections.reject { |item| tombstoned?(item.fetch("id")) }
+        due = candidates.reject { |item| fresh_resource?(@state.dig("resources", "playlist:#{item.fetch("id")}")) }
+        # Rotate unsuccessful/unknown endpoints so a damaged head cannot starve the tail.
+        cursor = @state.fetch("crawl", {}).fetch("discoveryPlaylistCursor", 0) % [due.length, 1].max
+        rotated = due.length.times.map { |i| due[(cursor + i) % due.length] }
+        @state["crawl"]["discoveryPlaylistCursor"] = cursor + @playlist_batch_size
+        return rotated.first(@playlist_batch_size)
+      end
       resources = @state.fetch("resources", {})
       missing, existing = collections.partition { |item| !resources.dig("playlist:#{item.fetch("id")}", "payload").is_a?(Array) }
       return missing.first(@playlist_batch_size) unless missing.empty?
@@ -820,13 +885,20 @@ module OrchidPipeline
         etag: previous&.fetch("etag", nil)
       )
       if result.status == 304
-        return [previous.fetch("payload"), previous.fetch("itemCount"), "notModified"] if previous&.key?("payload")
+        if previous&.key?("payload")
+          previous["validatedAt"] = @now.call.iso8601 if @verified_only
+          return [previous.fetch("payload"), previous.fetch("itemCount"), "notModified"]
+        end
 
         result = @transport.request(method: method, path: path, query: query)
       end
 
       root = parse_json(result.body)
+      validate_response!(root, playlist: key.start_with?("playlist:"))
       payload = parser.call(root)
+      if key.start_with?("playlist:") && payload.empty?
+        raise UnavailableCollection, "Playlist has no usable tracks."
+      end
       item_count = item_counter.call(root)
       @state["resources"][key] = {
         "etag" => result.headers["etag"],
@@ -834,11 +906,41 @@ module OrchidPipeline
         "itemCount" => item_count,
         "payload" => payload
       }
+      @state["resources"][key]["validatedAt"] = @now.call.iso8601 if @verified_only
+      if key.start_with?("playlist:")
+        @state.fetch("tombstones", {}).delete(key.delete_prefix("playlist:"))
+      end
       [payload, item_count, "downloaded"]
     rescue HTTPError, JSON::ParserError
       raise unless previous&.key?("payload")
 
       [previous.fetch("payload"), previous.fetch("itemCount"), "staleFallback"]
+    end
+
+    def validate_response!(root, playlist:)
+      raise HTTPError, "Malformed upstream response." unless root.is_a?(Hash)
+      error = root["error"]
+      if playlist && (root["deleted"] == true || (error.is_a?(Hash) && error["code"].to_i == 106))
+        raise UnavailableCollection, "Playlist no longer exists."
+      end
+      raise HTTPError, "Upstream returned an application error." if error
+      page = root["getVector"] || root["getPage"] || root["getPlaylist"] || root
+      raise HTTPError, "Upstream response has no items array." unless page.is_a?(Hash) && page["items"].is_a?(Array)
+    end
+
+    def tombstoned?(identifier)
+      timestamp = @state.dig("tombstones", identifier, "retryAt")
+      timestamp && Time.iso8601(timestamp) > @now.call
+    rescue ArgumentError
+      false
+    end
+
+    def fresh_resource?(resource)
+      return false unless resource.is_a?(Hash) && resource["payload"].is_a?(Array) && !resource["payload"].empty?
+      checked = resource["validatedAt"]
+      checked && @now.call - Time.iso8601(checked) <= @track_max_age
+    rescue ArgumentError
+      false
     end
 
     def enforce_playlist_gate!(stats)
@@ -923,6 +1025,9 @@ module OrchidPipeline
 
     def halt!(error)
       retry_after = error.respond_to?(:retry_after) ? error.retry_after : nil
+      if error.is_a?(RateLimitError)
+        @state["retryAfterUntil"] = (@now.call + [retry_after.to_i, 3600].max).iso8601
+      end
       @halt = retry_after ? "#{error.message}; retry after #{retry_after} seconds" : error.message
       @logger.call("Crawl paused: #{@halt}")
     end

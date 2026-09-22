@@ -1,0 +1,27 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+require_relative '../lib/orchid_pipeline'
+base = File.expand_path(ARGV.fetch(0))
+read_resource = lambda do |descriptor|
+  hash = descriptor.fetch('sha256')
+  path = descriptor.fetch('path')
+  raise 'Unsafe resource path' unless hash.match?(/\A[0-9a-f]{64}\z/) && path == "objects/#{hash}.json"
+  data = File.binread(File.join(base, path))
+  raise 'Resource hash mismatch' unless Digest::SHA256.hexdigest(data) == hash
+  JSON.parse(data)
+end
+manifest = JSON.parse(File.read(File.join(base, 'manifest.json')))
+raise 'Expected a verified-only catalog' unless manifest['deliveryPolicy'] == 'verified-only'
+catalog = read_resource.call(manifest.fetch('catalog'))
+items = catalog.fetch('collections')
+raise 'Catalog empty/count mismatch' unless !items.empty? && items.length == manifest.dig('catalog', 'collectionCount')
+raise 'Duplicate collection identities' unless items.map { |x| x.fetch('id') }.uniq.length == items.length
+items.each do |item|
+  descriptor = item.fetch('tracks')
+  document = read_resource.call(descriptor)
+  tracks = document.fetch('tracks')
+  raise 'Wrong collection identity' unless document['collectionID'] == item['id']
+  raise 'Empty/count mismatch' unless !tracks.empty? && tracks.length == descriptor.fetch('trackCount')
+  raise 'Duplicate tracks' unless tracks.map { |x| x.fetch('id') }.uniq.length == tracks.length
+end
+puts "Validated #{items.length} complete playlists and all content hashes."
