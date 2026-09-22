@@ -1,7 +1,7 @@
 {
   "crawl": {
     "discoveryPlaylistCursor": 60,
-    "discoveryVectorCursor": 5,
+    "discoveryVectorCursor": 6,
     "vectorCursor": 0
   },
   "discovery": {
