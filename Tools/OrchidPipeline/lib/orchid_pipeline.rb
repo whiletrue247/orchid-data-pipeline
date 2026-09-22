@@ -588,6 +588,10 @@ module OrchidPipeline
       }
       @logger.call(CanonicalJSON.pretty(@summary))
       @summary
+    rescue Error
+      # Preserve successful validation, tombstones and Retry-After even when publication fails.
+      write_json_atomic(@state_path, @state)
+      raise
     end
 
     private

@@ -48,6 +48,7 @@ jobs:
         run: ruby Tools/OrchidPipeline/test/orchid_pipeline_test.rb
 
       - name: Restore the last known good snapshot and source state
+        id: restore
         shell: bash
         run: |
           set -euo pipefail
@@ -59,6 +60,7 @@ jobs:
           fi
 
       - name: Incrementally build the Taiwan feed snapshot
+        id: catalog
         env:
           ORCHID_SOURCE_URL: ${{ secrets.ORCHID_SOURCE_URL }}
         run: |
@@ -93,6 +95,7 @@ jobs:
           cat .build/orchid/summary.json >> "$GITHUB_STEP_SUMMARY"
 
       - name: Persist source state and immutable objects
+        if: always() && steps.restore.outcome == 'success' && (steps.catalog.outcome == 'success' || steps.catalog.outcome == 'failure')
         shell: bash
         run: |
           set -euo pipefail
