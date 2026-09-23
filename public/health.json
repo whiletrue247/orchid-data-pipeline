@@ -1,23 +1,28 @@
 {
-  "candidateCount": 201,
+  "candidateCount": 303,
   "changed": true,
-  "checkedAt": "2026-09-23T08:30:52Z",
-  "collectionCount": 71,
-  "contentChanged": false,
-  "contentVersion": "8022cae5a12b1e8ba95ce9caeb590f7cbbe06bfe8585a3dca89532c0309634ff",
+  "checkedAt": "2026-09-23T11:21:38Z",
+  "collectionCount": 88,
+  "contentChanged": true,
+  "contentVersion": "d3122a85aaac345cc59cb89aecbb9f80f51fe2c35d46e923ad54ff7e0ee1fda3",
   "deliveryPolicy": "verified-only",
   "duplicateCollectionCount": 0,
   "failures": [
 
   ],
   "halted": false,
+  "homeObservedCount": 60,
+  "homeOpeningMissingIDs": [
+    "RDWV1iHAt3kaw",
+    "RD7H1ObJvb7Hc"
+  ],
+  "homeVerifiedCount": 31,
   "knownVectorCount": 30,
-  "pageReadCount": 0,
+  "pageReadCount": 2,
   "publication": "published",
-  "refreshDueCollectionCount": 1,
+  "refreshDueCollectionCount": 0,
   "retryAfterUntil": null,
   "schemaVersion": 2,
-  "syncDeferredUntil": "2026-09-23T10:20:22Z",
   "topicCoverage": {
     "era:evergreen": 5,
     "genre:country": 2,
@@ -28,17 +33,16 @@
     "genre:kpop": 1,
     "genre:pop": 4,
     "mood:chill": 1,
-    "mood:commute": 2,
     "mood:good": 7,
-    "mood:party": 3,
+    "mood:party": 2,
     "mood:romance": 5,
     "mood:sleep": 7,
     "mood:travel": 10
   },
-  "trackCount": 4214,
+  "trackCount": 4639,
   "unavailableCount": 0,
-  "uniqueTrackCount": 3926,
+  "uniqueTrackCount": 4140,
   "upstreamFailures": 0,
-  "validatedPlaylistCount": 0,
-  "vectorReadCount": 0
+  "validatedPlaylistCount": 18,
+  "vectorReadCount": 2
 }

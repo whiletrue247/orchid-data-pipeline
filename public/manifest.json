@@ -1,16 +1,16 @@
 {
   "catalog": {
-    "collectionCount": 71,
-    "path": "objects/8022cae5a12b1e8ba95ce9caeb590f7cbbe06bfe8585a3dca89532c0309634ff.json",
-    "sha256": "8022cae5a12b1e8ba95ce9caeb590f7cbbe06bfe8585a3dca89532c0309634ff"
+    "collectionCount": 88,
+    "path": "objects/d3122a85aaac345cc59cb89aecbb9f80f51fe2c35d46e923ad54ff7e0ee1fda3.json",
+    "sha256": "d3122a85aaac345cc59cb89aecbb9f80f51fe2c35d46e923ad54ff7e0ee1fda3"
   },
-  "contentVersion": "8022cae5a12b1e8ba95ce9caeb590f7cbbe06bfe8585a3dca89532c0309634ff",
+  "contentVersion": "d3122a85aaac345cc59cb89aecbb9f80f51fe2c35d46e923ad54ff7e0ee1fda3",
   "deliveryPolicy": "verified-only",
-  "generatedAt": "2026-09-23T08:25:03Z",
+  "generatedAt": "2026-09-23T11:21:38Z",
   "region": {
     "languageTag": "zh-TW",
     "regionCode": "TW"
   },
   "schemaVersion": 1,
-  "source": "orchid-discovery-v3"
+  "source": "orchid-discovery-v4"
 }
