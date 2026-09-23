@@ -22,6 +22,9 @@ items.each do |item|
   tracks = document.fetch('tracks')
   raise 'Wrong collection identity' unless document['collectionID'] == item['id']
   raise 'Empty/count mismatch' unless !tracks.empty? && tracks.length == descriptor.fetch('trackCount')
+  if item['previewTracks']
+    raise 'Preview does not match complete track resource' unless item['previewTracks'] == tracks.first(3)
+  end
   raise 'Duplicate tracks' unless tracks.map { |x| x.fetch('id') }.uniq.length == tracks.length
 end
 puts "Validated #{items.length} complete playlists and all content hashes."

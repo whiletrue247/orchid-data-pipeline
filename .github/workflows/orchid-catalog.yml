@@ -45,7 +45,9 @@ jobs:
           bundler-cache: false
 
       - name: Test snapshot builder
-        run: ruby Tools/OrchidPipeline/test/orchid_pipeline_test.rb
+        run: |
+          ruby Tools/OrchidPipeline/test/orchid_pipeline_test.rb
+          ruby Tools/OrchidPipeline/test/discovery_sync_test.rb
 
       - name: Restore the last known good snapshot and source state
         id: restore
@@ -64,21 +66,14 @@ jobs:
         env:
           ORCHID_SOURCE_URL: ${{ secrets.ORCHID_SOURCE_URL }}
         run: |
-          ruby Tools/OrchidPipeline/bin/build_orchid \
+          ruby Tools/OrchidPipeline/bin/sync_discovery \
             --output .build/orchid/public \
             --state .build/orchid/source-state.json \
             --summary .build/orchid/summary.json \
-            --region TW \
-            --language zh-TW \
-            --verified-only \
-            --max-pages 1 \
-            --vector-batch-size 4 \
-            --vector-request-budget 4 \
-            --playlist-batch-size 12 \
+            --vector-batch-size 2 \
+            --playlist-batch-size 18 \
             --request-budget 24 \
-            --track-max-age 48 \
-            --minimum-collections 20 \
-            --minimum-playlist-success-rate 0.8
+            --minimum-collections 20
 
       - name: Validate the complete public graph
         run: ruby Tools/OrchidPipeline/bin/validate_snapshot .build/orchid/public

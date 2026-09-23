@@ -1,0 +1,29 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+require 'optparse'
+require_relative '../lib/discovery/sync'
+options = {output:'.build/orchid/public',state:'.build/orchid/source-state.json',minimum:20,
+           vector_limit:2,playlist_limit:18,page_size:24}
+summary_path = '.build/orchid/summary.json'
+request_budget = 24
+OptionParser.new do |p|
+  p.on('--output DIR') { |v| options[:output]=v }
+  p.on('--state FILE') { |v| options[:state]=v }
+  p.on('--summary FILE') { |v| summary_path=v }
+  p.on('--minimum-collections N',Integer) { |v| options[:minimum]=v }
+  p.on('--vector-batch-size N',Integer) { |v| options[:vector_limit]=v }
+  p.on('--playlist-batch-size N',Integer) { |v| options[:playlist_limit]=v }
+  p.on('--request-budget N',Integer) { |v| request_budget=v }
+end.parse!
+source_url = ENV.fetch('ORCHID_SOURCE_URL')
+session = OrchidPipeline::HTTPSession.new(base_url:source_url,region_code:'TW',language_tag:'zh-TW',
+  browser_language:'zh',minimum_request_interval:2,maximum_requests:request_budget)
+begin
+  result = OrchidPipeline::Discovery::Sync.new(transport:session,**options).run
+  FileUtils.mkdir_p(File.dirname(summary_path))
+  File.write(summary_path,OrchidPipeline::CanonicalJSON.pretty(result))
+rescue OrchidPipeline::Error => e
+  warn("Discovery sync failed: #{e.message}");exit 1
+ensure
+  session.close
+end
