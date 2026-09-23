@@ -1,19 +1,23 @@
 {
   "candidateCount": 201,
   "changed": true,
-  "checkedAt": "2026-09-23T08:25:03Z",
+  "checkedAt": "2026-09-23T08:30:21Z",
   "collectionCount": 71,
-  "contentChanged": true,
+  "contentChanged": false,
   "contentVersion": "8022cae5a12b1e8ba95ce9caeb590f7cbbe06bfe8585a3dca89532c0309634ff",
   "deliveryPolicy": "verified-only",
   "duplicateCollectionCount": 0,
+  "failures": [
+
+  ],
   "halted": false,
   "knownVectorCount": 30,
+  "pageReadCount": 0,
   "publication": "published",
   "refreshDueCollectionCount": 1,
-  "researchResponsesReused": 3,
   "retryAfterUntil": null,
   "schemaVersion": 2,
+  "syncDeferredUntil": "2026-09-23T10:20:22Z",
   "topicCoverage": {
     "era:evergreen": 5,
     "genre:country": 2,
@@ -32,7 +36,9 @@
     "mood:travel": 10
   },
   "trackCount": 4214,
+  "unavailableCount": 0,
   "uniqueTrackCount": 3926,
-  "upstreamFailures": 1,
-  "validatedPlaylistCount": 20
+  "upstreamFailures": 0,
+  "validatedPlaylistCount": 0,
+  "vectorReadCount": 0
 }

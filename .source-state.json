@@ -1698,7 +1698,9 @@
         "id": "11246443",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:party"
           ]
@@ -1718,7 +1720,9 @@
         "Search:genreShelfParty": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:party"
             ]
@@ -1855,7 +1859,9 @@
         "id": "11602106",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:chill"
           ]
@@ -1875,7 +1881,9 @@
         "Search:genreShelfChill": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:chill"
             ]
@@ -2032,7 +2040,9 @@
         "id": "13041833",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:chill"
           ]
@@ -2051,7 +2061,9 @@
         "Search:genreShelfChill": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:chill"
             ]
@@ -2064,7 +2076,9 @@
         "id": "13472004",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:party"
           ]
@@ -2083,7 +2097,9 @@
         "Search:genreShelfParty": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:party"
             ]
@@ -2096,7 +2112,9 @@
         "id": "15139379",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:chill"
           ]
@@ -2115,7 +2133,9 @@
         "Search:genreShelfChill": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:chill"
             ]
@@ -2709,7 +2729,9 @@
         "id": "17360687",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:chill"
           ]
@@ -2728,7 +2750,9 @@
         "Search:genreShelfChill": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:chill"
             ]
@@ -6064,7 +6088,9 @@
           "editorialSignals": [
             "featured"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "11 首",
         "thumbnailSize": {
@@ -6084,7 +6110,9 @@
             "editorialSignals": [
               "featured"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       },
@@ -6221,7 +6249,9 @@
           "editorialSignals": [
             "featured"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "11 首",
         "thumbnailSize": {
@@ -6240,7 +6270,9 @@
             "editorialSignals": [
               "featured"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       }
@@ -6253,7 +6285,9 @@
           "editorialSignals": [
             "featured"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "14 首",
         "thumbnailSize": {
@@ -6272,7 +6306,9 @@
             "editorialSignals": [
               "featured"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       }
@@ -6285,7 +6321,9 @@
           "editorialSignals": [
             "featured"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "30 首",
         "thumbnailSize": {
@@ -6304,7 +6342,9 @@
             "editorialSignals": [
               "featured"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       }
@@ -6317,7 +6357,9 @@
           "editorialSignals": [
             "featured"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "25 首",
         "thumbnailSize": {
@@ -6336,7 +6378,9 @@
             "editorialSignals": [
               "featured"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       }
@@ -6349,7 +6393,9 @@
           "editorialSignals": [
             "featured"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "12 首",
         "thumbnailSize": {
@@ -6368,7 +6414,9 @@
             "editorialSignals": [
               "featured"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       }
@@ -6381,7 +6429,9 @@
           "editorialSignals": [
             "featured"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "11 首",
         "thumbnailSize": {
@@ -6400,7 +6450,9 @@
             "editorialSignals": [
               "featured"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       },
@@ -6536,7 +6588,9 @@
           "editorialSignals": [
             "featured"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "28 首",
         "thumbnailSize": {
@@ -6555,7 +6609,9 @@
             "editorialSignals": [
               "featured"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       }
@@ -6568,7 +6624,9 @@
           "editorialSignals": [
             "featured"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "22 首",
         "thumbnailSize": {
@@ -6587,7 +6645,9 @@
             "editorialSignals": [
               "featured"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       }
@@ -6600,7 +6660,9 @@
           "editorialSignals": [
             "latest"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "2 首",
         "thumbnailSize": {
@@ -6627,7 +6689,9 @@
             "editorialSignals": [
               "latest"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       },
@@ -6667,7 +6731,9 @@
           "editorialSignals": [
             "latest"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "1 首",
         "thumbnailSize": {
@@ -6694,7 +6760,9 @@
             "editorialSignals": [
               "latest"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       },
@@ -6724,7 +6792,9 @@
           "editorialSignals": [
             "latest"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "1 首",
         "thumbnailSize": {
@@ -6744,7 +6814,9 @@
             "editorialSignals": [
               "latest"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       },
@@ -6781,7 +6853,9 @@
           "editorialSignals": [
             "latest"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "1 首",
         "thumbnailSize": {
@@ -6800,7 +6874,9 @@
             "editorialSignals": [
               "latest"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       }
@@ -6813,7 +6889,9 @@
           "editorialSignals": [
             "latest"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "1 首",
         "thumbnailSize": {
@@ -6832,7 +6910,9 @@
             "editorialSignals": [
               "latest"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       }
@@ -6845,7 +6925,9 @@
           "editorialSignals": [
             "latest"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "6 首",
         "thumbnailSize": {
@@ -6864,7 +6946,9 @@
             "editorialSignals": [
               "latest"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       }
@@ -6877,7 +6961,9 @@
           "editorialSignals": [
             "latest"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "1 首",
         "thumbnailSize": {
@@ -6896,7 +6982,9 @@
             "editorialSignals": [
               "latest"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       }
@@ -6909,7 +6997,9 @@
           "editorialSignals": [
             "latest"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "1 首",
         "thumbnailSize": {
@@ -6928,7 +7018,9 @@
             "editorialSignals": [
               "latest"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       }
@@ -6941,7 +7033,9 @@
           "editorialSignals": [
             "latest"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "7 首",
         "thumbnailSize": {
@@ -6960,7 +7054,9 @@
             "editorialSignals": [
               "latest"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       }
@@ -6973,7 +7069,9 @@
           "editorialSignals": [
             "latest"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "1 首",
         "thumbnailSize": {
@@ -6992,7 +7090,9 @@
             "editorialSignals": [
               "latest"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       }
@@ -7005,7 +7105,9 @@
           "editorialSignals": [
             "latest"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "4 首",
         "thumbnailSize": {
@@ -7024,7 +7126,9 @@
             "editorialSignals": [
               "latest"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       }
@@ -7037,7 +7141,9 @@
           "editorialSignals": [
             "latest"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "1 首",
         "thumbnailSize": {
@@ -7056,7 +7162,9 @@
             "editorialSignals": [
               "latest"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       }
@@ -8802,7 +8910,9 @@
         "id": "24628541",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:country"
           ]
@@ -8822,7 +8932,9 @@
         "vector:vector_systemlist_zh_genre_country": {
           "lastSeenAt": "2026-09-23T08:17:22Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:country"
             ]
@@ -9029,7 +9141,9 @@
         "id": "24628558",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:country"
           ]
@@ -9048,7 +9162,9 @@
         "vector:vector_systemlist_zh_genre_country": {
           "lastSeenAt": "2026-09-23T08:17:22Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:country"
             ]
@@ -9061,7 +9177,9 @@
         "id": "24628562",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:country",
             "mood:travel"
@@ -9089,7 +9207,9 @@
         "vector:vector_systemlist_zh_genre_country": {
           "lastSeenAt": "2026-09-23T08:17:22Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:country"
             ]
@@ -9289,7 +9409,9 @@
         "id": "25815390",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:chill"
           ]
@@ -9308,7 +9430,9 @@
         "Search:genreShelfChill": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:chill"
             ]
@@ -9321,7 +9445,9 @@
         "id": "25937636",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:country"
           ]
@@ -9340,7 +9466,9 @@
         "vector:vector_systemlist_zh_genre_country": {
           "lastSeenAt": "2026-09-23T08:17:22Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:country"
             ]
@@ -9353,7 +9481,9 @@
         "id": "26024937",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:party"
           ]
@@ -9372,7 +9502,9 @@
         "Search:genreShelfParty": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:party"
             ]
@@ -9592,7 +9724,9 @@
         "id": "27298694",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:country",
             "genre:rock"
@@ -9612,7 +9746,9 @@
         "vector:vector_systemlist_zh_genre_country": {
           "lastSeenAt": "2026-09-23T08:17:22Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:country",
               "genre:rock"
@@ -9626,7 +9762,9 @@
         "id": "27957773",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:country"
           ]
@@ -9645,7 +9783,9 @@
         "vector:vector_systemlist_zh_genre_country": {
           "lastSeenAt": "2026-09-23T08:17:22Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:country"
             ]
@@ -9658,7 +9798,9 @@
         "id": "28148114",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:party"
           ]
@@ -9677,7 +9819,9 @@
         "Search:genreShelfParty": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:party"
             ]
@@ -9927,7 +10071,9 @@
         "id": "28241171",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:party"
           ]
@@ -9946,7 +10092,9 @@
         "Search:genreShelfParty": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:party"
             ]
@@ -9963,7 +10111,9 @@
         "vector:vector_systemlist_zh_mood_party": {
           "lastSeenAt": "2026-09-23T04:50:02Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:party"
             ]
@@ -10370,7 +10520,9 @@
         "id": "28394191",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:party"
           ]
@@ -10389,7 +10541,9 @@
         "Search:genreShelfParty": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:party"
             ]
@@ -10402,7 +10556,9 @@
         "id": "28394194",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:party"
           ]
@@ -10421,7 +10577,9 @@
         "Search:genreShelfParty": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:party"
             ]
@@ -10715,7 +10873,9 @@
         "id": "28433486",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:party"
           ]
@@ -10742,7 +10902,9 @@
         "vector:vector_systemlist_zh_mood_party": {
           "lastSeenAt": "2026-09-23T04:50:02Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:party"
             ]
@@ -10962,7 +11124,9 @@
         "id": "41750898",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:country"
           ]
@@ -10981,7 +11145,9 @@
         "vector:vector_systemlist_zh_genre_country": {
           "lastSeenAt": "2026-09-23T08:17:22Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:country"
             ]
@@ -10994,7 +11160,9 @@
         "id": "41751346",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:country"
           ]
@@ -11013,7 +11181,9 @@
         "vector:vector_systemlist_zh_genre_country": {
           "lastSeenAt": "2026-09-23T08:17:22Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:country"
             ]
@@ -11026,7 +11196,9 @@
         "id": "41767706",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:country"
           ]
@@ -11045,7 +11217,9 @@
         "vector:vector_systemlist_zh_genre_country": {
           "lastSeenAt": "2026-09-23T08:17:22Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:country"
             ]
@@ -11058,7 +11232,9 @@
         "id": "41767832",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:country"
           ]
@@ -11077,7 +11253,9 @@
         "vector:vector_systemlist_zh_genre_country": {
           "lastSeenAt": "2026-09-23T08:17:22Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:country"
             ]
@@ -11090,7 +11268,9 @@
         "id": "43884453",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "era:evergreen",
             "genre:cpop"
@@ -11118,7 +11298,9 @@
         "vector:vector_systemlist_zh_genre_cpop": {
           "lastSeenAt": "2026-09-23T08:17:24Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:cpop"
             ]
@@ -15758,7 +15940,9 @@
         "id": "43884454",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:cpop"
           ]
@@ -15778,7 +15962,9 @@
         "vector:vector_systemlist_zh_genre_cpop": {
           "lastSeenAt": "2026-09-23T08:17:24Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:cpop"
             ]
@@ -16095,7 +16281,9 @@
         "id": "43884461",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:cpop"
           ]
@@ -16114,7 +16302,9 @@
         "vector:vector_systemlist_zh_genre_cpop": {
           "lastSeenAt": "2026-09-23T08:17:24Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:cpop"
             ]
@@ -16130,7 +16320,9 @@
           "editorialSignals": [
             "featured"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "2 首",
         "thumbnailSize": {
@@ -16149,7 +16341,9 @@
             "editorialSignals": [
               "featured"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       }
@@ -16722,7 +16916,9 @@
           "editorialSignals": [
             "charts"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "85 首",
         "thumbnailSize": null,
@@ -16739,7 +16935,9 @@
             "editorialSignals": [
               "charts"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         },
         "Search:topChart": {
@@ -16748,7 +16946,9 @@
             "editorialSignals": [
               "charts"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         },
         "migration": {
@@ -16765,7 +16965,9 @@
             "editorialSignals": [
               "charts"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       },
@@ -17492,7 +17694,9 @@
           "editorialSignals": [
             "discovery"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "25 首",
         "thumbnailSize": {
@@ -17512,7 +17716,9 @@
             "editorialSignals": [
               "discovery"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       },
@@ -17787,7 +17993,9 @@
           "editorialSignals": [
             "discovery"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "25 首",
         "thumbnailSize": {
@@ -17806,7 +18014,9 @@
             "editorialSignals": [
               "discovery"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       }
@@ -17819,7 +18029,9 @@
           "editorialSignals": [
             "discovery"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "25 首",
         "thumbnailSize": {
@@ -17838,7 +18050,9 @@
             "editorialSignals": [
               "discovery"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       }
@@ -17851,7 +18065,9 @@
           "editorialSignals": [
             "discovery"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "25 首",
         "thumbnailSize": {
@@ -17870,7 +18086,9 @@
             "editorialSignals": [
               "discovery"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       }
@@ -17883,7 +18101,9 @@
           "editorialSignals": [
             "discovery"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "25 首",
         "thumbnailSize": {
@@ -17902,7 +18122,9 @@
             "editorialSignals": [
               "discovery"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       }
@@ -17912,7 +18134,9 @@
         "id": "RDCLAK5uy_k0VOF1E5SxNvGGHwxw_zcjfY6M-MjjeMo",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:electronic-dance"
           ]
@@ -17939,7 +18163,9 @@
         "vector:vector_systemlist_zh_genre_electronic_dance": {
           "lastSeenAt": "2026-09-22T19:45:50Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:electronic-dance"
             ]
@@ -18909,7 +19135,9 @@
         "id": "RDCLAK5uy_k0qYPSwgYvs8cXsKoroJ87oQqZtzoZlnc",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:good"
           ]
@@ -18928,7 +19156,9 @@
         "Search:genreShelfGood": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:good"
             ]
@@ -18977,7 +19207,9 @@
         "id": "RDCLAK5uy_k4QxtdDiyPtN17wezA186nbXuqO36QOiU",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:hip-hop"
           ]
@@ -18996,7 +19228,9 @@
         "Search:genreShelfHiphop": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:hip-hop"
             ]
@@ -19009,7 +19243,9 @@
         "id": "RDCLAK5uy_k4ayZY3wXipmOhFthBkx_tww1whwQxWyM",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:hip-hop"
           ]
@@ -19028,7 +19264,9 @@
         "Search:genreShelfHiphop": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:hip-hop"
             ]
@@ -19041,7 +19279,9 @@
         "id": "RDCLAK5uy_k5cx6i-puyGDCZrYN-XNoqH1ap3LIgo_M",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:commute"
           ]
@@ -19061,7 +19301,9 @@
         "Search:genreShelfCommute": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:commute"
             ]
@@ -19716,7 +19958,9 @@
         "id": "RDCLAK5uy_k5psGic7w1Z8Udh8rwqpoKxqznjhq8p54",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:commute"
           ]
@@ -19735,7 +19979,9 @@
         "Search:genreShelfCommute": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:commute"
             ]
@@ -21002,7 +21248,9 @@
         "id": "RDCLAK5uy_k9CSSpu431aC3IKxRhWmb5shTE8Em2y9Y",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:cpop"
           ]
@@ -21021,7 +21269,9 @@
         "vector:vector_systemlist_zh_genre_cpop": {
           "lastSeenAt": "2026-09-23T08:17:24Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:cpop"
             ]
@@ -21034,7 +21284,9 @@
         "id": "RDCLAK5uy_kBx-sjelcdmAxRchYQcbAMna5ZWfz3qw8",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:good"
           ]
@@ -21053,7 +21305,9 @@
         "Search:genreShelfGood": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:good"
             ]
@@ -21066,7 +21320,9 @@
         "id": "RDCLAK5uy_kNzdtZz5yF-crDDcYxlIDOju50Tyqnrig",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:hip-hop"
           ]
@@ -21085,7 +21341,9 @@
         "Search:genreShelfHiphop": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:hip-hop"
             ]
@@ -21098,7 +21356,9 @@
         "id": "RDCLAK5uy_kPR9usfd5aQ8n4rTcEv7y1VLvMm1ewig4",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:good"
           ]
@@ -21117,7 +21377,9 @@
         "Search:genreShelfGood": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:good"
             ]
@@ -21130,7 +21392,9 @@
         "id": "RDCLAK5uy_kPjcoqujX4nTKs3YhCKNIZtS67cICOsYc",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:good"
           ]
@@ -21149,7 +21413,9 @@
         "Search:genreShelfGood": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:good"
             ]
@@ -21162,7 +21428,9 @@
         "id": "RDCLAK5uy_kTa30Qoe2Km37nGuArDHsjC-VDN7qDZeU",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:good"
           ]
@@ -21181,7 +21449,9 @@
         "Search:genreShelfGood": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:good"
             ]
@@ -22131,7 +22401,9 @@
         "id": "RDCLAK5uy_kY-egqbCKK3TrJtFVYYFU2MXsSJxd8p4s",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:hip-hop"
           ]
@@ -22150,7 +22422,9 @@
         "Search:genreShelfHiphop": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:hip-hop"
             ]
@@ -22163,7 +22437,9 @@
         "id": "RDCLAK5uy_kY7Uomg8uSGAGuvMIKc3HsVg_ipocKTrE",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:commute"
           ]
@@ -22182,7 +22458,9 @@
         "Search:genreShelfCommute": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:commute"
             ]
@@ -22195,7 +22473,9 @@
         "id": "RDCLAK5uy_kdHQTBPDpDNGmQJ3L88OpEa5lLoyPHiGU",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:hip-hop"
           ]
@@ -22214,7 +22494,9 @@
         "Search:genreShelfHiphop": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:hip-hop"
             ]
@@ -23094,7 +23376,9 @@
         "id": "RDCLAK5uy_khfoBlJ96kYmBivOddcrO8UO33YbRbLf4",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:commute"
           ]
@@ -23113,7 +23397,9 @@
         "Search:genreShelfCommute": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:commute"
             ]
@@ -23126,7 +23412,9 @@
         "id": "RDCLAK5uy_km8j1Msn0n8FTLRIw0krI9k2sf-t1Z4hg",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:commute"
           ]
@@ -23145,7 +23433,9 @@
         "Search:genreShelfCommute": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:commute"
             ]
@@ -23158,7 +23448,9 @@
         "id": "RDCLAK5uy_kmxYMUgERVjuxoAPA_WgY6f036fkLCTMI",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:good"
           ]
@@ -23177,7 +23469,9 @@
         "Search:genreShelfGood": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:good"
             ]
@@ -24227,7 +24521,9 @@
         "id": "RDCLAK5uy_kzRI4gV3VWWpZqtF9F404806IYXoFzbUU",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:commute"
           ]
@@ -24246,7 +24542,9 @@
         "Search:genreShelfCommute": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:commute"
             ]
@@ -24295,7 +24593,9 @@
         "id": "RDCLAK5uy_l3CLqCxG8Cl6PefcXuvI5MOaoGHcklsrM",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:good"
           ]
@@ -24314,7 +24614,9 @@
         "Search:genreShelfGood": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:good"
             ]
@@ -24327,7 +24629,9 @@
         "id": "RDCLAK5uy_l8d3jZelEBCQHd9zKjONeTIpKcIK5FmmQ",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:cpop"
           ]
@@ -24346,7 +24650,9 @@
         "vector:vector_systemlist_zh_genre_cpop": {
           "lastSeenAt": "2026-09-23T08:17:24Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:cpop"
             ]
@@ -24359,7 +24665,9 @@
         "id": "RDCLAK5uy_l98GhjIKA5yKA4lCEq4uAyMpAvJtupQ0k",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:chill"
           ]
@@ -24378,7 +24686,9 @@
         "Search:genreShelfChill": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:chill"
             ]
@@ -24391,7 +24701,9 @@
         "id": "RDCLAK5uy_l9QboBEeMYgKPz7cbhNURTyykHPLXrM9s",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:good"
           ]
@@ -24410,7 +24722,9 @@
         "Search:genreShelfGood": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:good"
             ]
@@ -25090,7 +25404,9 @@
         "id": "RDCLAK5uy_lJ8xZWiZj2GCw7MArjakb6b0zfvqwldps",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:country"
           ]
@@ -25109,7 +25425,9 @@
         "vector:vector_systemlist_zh_genre_country": {
           "lastSeenAt": "2026-09-23T08:17:22Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:country"
             ]
@@ -25122,7 +25440,9 @@
         "id": "RDCLAK5uy_lKL2i08SARZR_vSo5PW_JlM0YW12agYf0",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:hip-hop"
           ]
@@ -25141,7 +25461,9 @@
         "Search:genreShelfHiphop": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:hip-hop"
             ]
@@ -25154,7 +25476,9 @@
         "id": "RDCLAK5uy_lKSBZf05I2jThij0M0ZPiKp_Rh2_uIewQ",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:country"
           ]
@@ -25173,7 +25497,9 @@
         "vector:vector_systemlist_zh_genre_country": {
           "lastSeenAt": "2026-09-23T08:17:22Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:country"
             ]
@@ -25186,7 +25512,9 @@
         "id": "RDCLAK5uy_lLKgIq0wXa-0Bo3gxebeQUwEBS3DtXjPg",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:cpop"
           ]
@@ -25205,7 +25533,9 @@
         "vector:vector_systemlist_zh_genre_cpop": {
           "lastSeenAt": "2026-09-23T08:17:24Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:cpop"
             ]
@@ -25218,7 +25548,9 @@
         "id": "RDCLAK5uy_lMsSmFev6FFXWxVnyiwubAvcdZUUgaNcg",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:country"
           ]
@@ -25237,7 +25569,9 @@
         "vector:vector_systemlist_zh_genre_country": {
           "lastSeenAt": "2026-09-23T08:17:22Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:country"
             ]
@@ -25250,7 +25584,9 @@
         "id": "RDCLAK5uy_lNvwIE3Qra5IBQSBBG460nLyxbwnzjDRU",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:good"
           ]
@@ -25277,7 +25613,9 @@
         "vector:vector_systemlist_zh_mood_good_mood": {
           "lastSeenAt": "2026-09-22T22:59:28Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:good"
             ]
@@ -25977,7 +26315,9 @@
         "id": "RDCLAK5uy_lRr70m6uTvLpxAG3G6Yuc41cJBIXODAws",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:hip-hop"
           ]
@@ -25996,7 +26336,9 @@
         "Search:genreShelfHiphop": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:hip-hop"
             ]
@@ -26536,7 +26878,9 @@
         "id": "RDCLAK5uy_lXjH0l0C1stU-ZtZQtjHYIC4VXg7qEt0Y",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:country"
           ]
@@ -26555,7 +26899,9 @@
         "vector:vector_systemlist_zh_genre_country": {
           "lastSeenAt": "2026-09-23T08:17:22Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:country"
             ]
@@ -27215,7 +27561,9 @@
         "id": "RDCLAK5uy_lc4yBYpywmmgjplkuzYxzUgLJ8UvDKUUk",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:commute"
           ]
@@ -27234,7 +27582,9 @@
         "Search:genreShelfCommute": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:commute"
             ]
@@ -27247,7 +27597,9 @@
         "id": "RDCLAK5uy_ld5jsLF7ZVsw2pnBl6_Qk3DbyPlTQoIZI",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:electronic-dance"
           ]
@@ -27274,7 +27626,9 @@
         "vector:vector_systemlist_zh_genre_electronic_dance": {
           "lastSeenAt": "2026-09-22T19:45:50Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:electronic-dance"
             ]
@@ -27924,7 +28278,9 @@
         "id": "RDCLAK5uy_lfi1AnbV2S_7B338r4jTXKpSq-QOLYGgY",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:good"
           ]
@@ -27951,7 +28307,9 @@
         "vector:vector_systemlist_zh_mood_good_mood": {
           "lastSeenAt": "2026-09-22T22:59:28Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:good"
             ]
@@ -28511,7 +28869,9 @@
         "id": "RDCLAK5uy_li40oRtkZfR06nf8rRzgRMraDx764TEN0",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:chill"
           ]
@@ -28530,7 +28890,9 @@
         "Search:genreShelfChill": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:chill"
             ]
@@ -28543,7 +28905,9 @@
         "id": "RDCLAK5uy_lj69jAyRXnzetUT4SIloTmReZajghYcj8",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:country"
           ]
@@ -28562,7 +28926,9 @@
         "vector:vector_systemlist_zh_genre_country": {
           "lastSeenAt": "2026-09-23T08:17:22Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:country"
             ]
@@ -29292,7 +29658,9 @@
         "id": "RDCLAK5uy_lx4Lt9IVl7DT0zw_-7bHCA5SHgUyObAZU",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:hip-hop"
           ]
@@ -29311,7 +29679,9 @@
         "Search:genreShelfHiphop": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:hip-hop"
             ]
@@ -30269,7 +30639,9 @@
         "id": "RDCLAK5uy_lz9sz8QrlhkrIzEXKrEQV-ulusmaZ00gM",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:electronic-dance"
           ]
@@ -30296,7 +30668,9 @@
         "vector:vector_systemlist_zh_genre_electronic_dance": {
           "lastSeenAt": "2026-09-22T19:45:50Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:electronic-dance"
             ]
@@ -30796,7 +31170,9 @@
         "id": "RDCLAK5uy_lzZ2FTtItPTnWXpdiYpNyiH5_xIXf17q8",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:chill"
           ]
@@ -30815,7 +31191,9 @@
         "Search:genreShelfChill": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:chill"
             ]
@@ -30828,7 +31206,9 @@
         "id": "RDCLAK5uy_lzovqKuo2WXDbKmON6Jrl51hmqoK1uo04",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:good"
           ]
@@ -30847,7 +31227,9 @@
         "Search:genreShelfGood": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:good"
             ]
@@ -31857,7 +32239,9 @@
         "id": "RDCLAK5uy_m3hSwtGcB6xMdXIAFmzikDTxaK6iYqchw",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:country"
           ]
@@ -31876,7 +32260,9 @@
         "vector:vector_systemlist_zh_genre_country": {
           "lastSeenAt": "2026-09-23T08:17:22Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:country"
             ]
@@ -31889,7 +32275,9 @@
         "id": "RDCLAK5uy_m4l9o8KGwQKrYuWFr1ej7hSrYOQDP6Jxw",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:cpop"
           ]
@@ -31908,7 +32296,9 @@
         "vector:vector_systemlist_zh_genre_cpop": {
           "lastSeenAt": "2026-09-23T08:17:24Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:cpop"
             ]
@@ -31953,7 +32343,9 @@
         "Search:genreShelfHiphop": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:hip-hop"
             ]
@@ -32723,7 +33115,9 @@
         "id": "RDCLAK5uy_m8UYTpmaUGhIlXpWiyukIgw4Ug_POVPNw",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:good"
           ]
@@ -32750,7 +33144,9 @@
         "vector:vector_systemlist_zh_mood_good_mood": {
           "lastSeenAt": "2026-09-22T22:59:28Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:good"
             ]
@@ -34357,7 +34753,9 @@
         "id": "RDCLAK5uy_m93HVTGL0c2IRUHvqPaXbEZ_iYjh4NmAo",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:cpop"
           ]
@@ -34376,7 +34774,9 @@
         "vector:vector_systemlist_zh_genre_cpop": {
           "lastSeenAt": "2026-09-23T08:17:24Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:cpop"
             ]
@@ -35096,7 +35496,9 @@
         "id": "RDCLAK5uy_mDQ7NUGEEtEnCRVZKjFDqqT00mT4N8lbk",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:commute"
           ]
@@ -35115,7 +35517,9 @@
         "Search:genreShelfCommute": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:commute"
             ]
@@ -36201,7 +36605,9 @@
         "id": "RDCLAK5uy_mMRkzfvFXzNQbSl3K-hE_FJ7g8TqMtSlo",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:hip-hop"
           ]
@@ -36220,7 +36626,9 @@
         "Search:genreShelfHiphop": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:hip-hop"
             ]
@@ -36233,7 +36641,9 @@
         "id": "RDCLAK5uy_mM_eOAkypCyzAr8n6CT0TQ7nDy-RksYYI",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:hip-hop"
           ]
@@ -36252,7 +36662,9 @@
         "Search:genreShelfHiphop": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:hip-hop"
             ]
@@ -36265,7 +36677,9 @@
         "id": "RDCLAK5uy_mODoXSJeiOpgt_UVHmVsURrDfXEx3Ruok",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:commute"
           ]
@@ -36284,7 +36698,9 @@
         "Search:genreShelfCommute": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:commute"
             ]
@@ -36297,7 +36713,9 @@
         "id": "RDCLAK5uy_mQM2-qOVfLCD2ZceUahSVgk4O1QoWCTZA",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:cpop"
           ]
@@ -36316,7 +36734,9 @@
         "vector:vector_systemlist_zh_genre_cpop": {
           "lastSeenAt": "2026-09-23T08:17:24Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:cpop"
             ]
@@ -36329,7 +36749,9 @@
         "id": "RDCLAK5uy_mQz_Nx3ld-c2SHDjqbN2BeKmjhH80uz3o",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:party"
           ]
@@ -36348,7 +36770,9 @@
         "Search:genreShelfParty": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:party"
             ]
@@ -36433,7 +36857,9 @@
         "id": "RDCLAK5uy_mTDHYYJLCkFv8XL1Z8AFkMqF9RfQZzeRc",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:cpop"
           ]
@@ -36452,7 +36878,9 @@
         "vector:vector_systemlist_zh_genre_cpop": {
           "lastSeenAt": "2026-09-23T08:17:24Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:cpop"
             ]
@@ -37166,7 +37594,9 @@
         "id": "RDCLAK5uy_mUa11Ovw8K63TZiOfDHoLhTYBKNKmBmlU",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:country"
           ]
@@ -37185,7 +37615,9 @@
         "vector:vector_systemlist_zh_genre_country": {
           "lastSeenAt": "2026-09-23T08:17:22Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:country"
             ]
@@ -37198,7 +37630,9 @@
         "id": "RDCLAK5uy_mVJ3RRi_YBfUJnZnQxLAedQQcXHujbUcg",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:good"
           ]
@@ -37217,7 +37651,9 @@
         "Search:genreShelfGood": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:good"
             ]
@@ -39094,7 +39530,9 @@
         "id": "RDCLAK5uy_mX4JK0m7lhZ8Egv1E7bbXox_e0k6rGejo",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:chill"
           ]
@@ -39113,7 +39551,9 @@
         "Search:genreShelfChill": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:chill"
             ]
@@ -39126,7 +39566,9 @@
         "id": "RDCLAK5uy_maC8_YA458CPC-VeeLpyPPJbj2mA9Y6lY",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:good"
           ]
@@ -39145,7 +39587,9 @@
         "Search:genreShelfGood": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:good"
             ]
@@ -39158,7 +39602,9 @@
         "id": "RDCLAK5uy_majSkod416xBCGyhCK2uJbRgXCKVooQVU",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:cpop"
           ]
@@ -39177,7 +39623,9 @@
         "vector:vector_systemlist_zh_genre_cpop": {
           "lastSeenAt": "2026-09-23T08:17:24Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:cpop"
             ]
@@ -39190,7 +39638,9 @@
         "id": "RDCLAK5uy_mfdqvCAl8wodlx2P2_Ai2gNkiRDAufkkI",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:good"
           ]
@@ -39217,7 +39667,9 @@
         "vector:vector_systemlist_zh_mood_good_mood": {
           "lastSeenAt": "2026-09-22T22:59:28Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:good"
             ]
@@ -40594,7 +41046,9 @@
         "id": "RDCLAK5uy_mijutvVbzp7bbNlWt-B5U90qb5KplCkSQ",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:cpop"
           ]
@@ -40613,7 +41067,9 @@
         "vector:vector_systemlist_zh_genre_cpop": {
           "lastSeenAt": "2026-09-23T08:17:24Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:cpop"
             ]
@@ -40626,7 +41082,9 @@
         "id": "RDCLAK5uy_mk6FCBl094c5801bL5c0BU3mR5TqbrNDc",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:chill"
           ]
@@ -40645,7 +41103,9 @@
         "Search:genreShelfChill": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:chill"
             ]
@@ -40658,7 +41118,9 @@
         "id": "RDCLAK5uy_mnx8YfEAZArSNzVKDpNcTBbUDPUxWRrhI",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:cpop"
           ]
@@ -40677,7 +41139,9 @@
         "vector:vector_systemlist_zh_genre_cpop": {
           "lastSeenAt": "2026-09-23T08:17:24Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:cpop"
             ]
@@ -40690,7 +41154,9 @@
         "id": "RDCLAK5uy_mqoCPstGUHbWhuTUJCwuApcihGy0ZVNmk",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:cpop"
           ]
@@ -40709,7 +41175,9 @@
         "vector:vector_systemlist_zh_genre_cpop": {
           "lastSeenAt": "2026-09-23T08:17:24Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:cpop"
             ]
@@ -40722,7 +41190,9 @@
         "id": "RDCLAK5uy_mr4jZnUpTfqqDqv04G7nf6o2ZtlJpNRMk",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:commute"
           ]
@@ -40741,7 +41211,9 @@
         "Search:genreShelfCommute": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:commute"
             ]
@@ -41501,7 +41973,9 @@
         "id": "RDCLAK5uy_mzYSsYfdCm5vN0hl-VFLn3qllz2G2kjzY",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:party"
           ]
@@ -41520,7 +41994,9 @@
         "Search:genreShelfParty": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:party"
             ]
@@ -41533,7 +42009,9 @@
         "id": "RDCLAK5uy_n0vqPVYwwLGVv8XMpjj7IovO50hqegreo",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:commute"
           ]
@@ -41552,7 +42030,9 @@
         "Search:genreShelfCommute": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:commute"
             ]
@@ -41565,7 +42045,9 @@
         "id": "RDCLAK5uy_n38QBvlkETFzw_TX8Z7wfA733kKr2vo0o",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:chill"
           ]
@@ -41584,7 +42066,9 @@
         "Search:genreShelfChill": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:chill"
             ]
@@ -41633,7 +42117,9 @@
         "id": "RDCLAK5uy_n64_P7t3MmbTu7jziSk48DL-oRWO98CPE",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:electronic-dance"
           ]
@@ -41660,7 +42146,9 @@
         "vector:vector_systemlist_zh_genre_electronic_dance": {
           "lastSeenAt": "2026-09-22T19:45:50Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:electronic-dance"
             ]
@@ -42683,7 +43171,9 @@
           "editorialSignals": [
             "curated"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "107 首",
         "thumbnailSize": {
@@ -42705,7 +43195,9 @@
             "editorialSignals": [
               "curated"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       }
@@ -43752,7 +44244,9 @@
         "id": "RDCLAK5uy_nEOENcLJBr5ZWcX5KsRFqlkLp05vN23Yk",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:good"
           ]
@@ -43779,7 +44273,9 @@
         "vector:vector_systemlist_zh_mood_good_mood": {
           "lastSeenAt": "2026-09-22T22:59:28Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:good"
             ]
@@ -44389,7 +44885,9 @@
         "id": "RDCLAK5uy_nH_fdBVCcbNaVwi_tmZajZRq-ekddiuFY",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:country"
           ]
@@ -44408,7 +44906,9 @@
         "vector:vector_systemlist_zh_genre_country": {
           "lastSeenAt": "2026-09-23T08:17:22Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:country"
             ]
@@ -44457,7 +44957,9 @@
         "id": "RDCLAK5uy_nJcxweTayTvF_AN_rriahrOCdGV086QfY",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:country"
           ]
@@ -44476,7 +44978,9 @@
         "vector:vector_systemlist_zh_genre_country": {
           "lastSeenAt": "2026-09-23T08:17:22Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:country"
             ]
@@ -44489,7 +44993,9 @@
         "id": "RDCLAK5uy_nL9A_iWyUHayr1Xl5ZVwdZEwcOoPxn_o0",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:cpop"
           ]
@@ -44508,7 +45014,9 @@
         "vector:vector_systemlist_zh_genre_cpop": {
           "lastSeenAt": "2026-09-23T08:17:24Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:cpop"
             ]
@@ -44521,7 +45029,9 @@
         "id": "RDCLAK5uy_nMYjrmCLs_0l1aOCNB3ij7tAlqbjrSe9A",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:electronic-dance"
           ]
@@ -44548,7 +45058,9 @@
         "vector:vector_systemlist_zh_genre_electronic_dance": {
           "lastSeenAt": "2026-09-22T19:45:50Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:electronic-dance"
             ]
@@ -46605,7 +47117,9 @@
         "id": "RDCLAK5uy_nOraQS0DsAIt0F62Go-ztE9P4ssuIiL8c",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:cpop"
           ]
@@ -46624,7 +47138,9 @@
         "vector:vector_systemlist_zh_genre_cpop": {
           "lastSeenAt": "2026-09-23T08:17:24Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:cpop"
             ]
@@ -46637,7 +47153,9 @@
         "id": "RDCLAK5uy_nQWv_1Zu_YJ48qNPtI2ED3YlJsSOssF5k",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:party"
           ]
@@ -46656,7 +47174,9 @@
         "Search:genreShelfParty": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:party"
             ]
@@ -46669,7 +47189,9 @@
         "id": "RDCLAK5uy_nQXTlvzUfwEzk3B4wnaeaQqZ7FFRd1_rY",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:chill",
             "mood:good"
@@ -46689,7 +47211,9 @@
         "Search:genreShelfChill": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:chill"
             ]
@@ -46698,7 +47222,9 @@
         "Search:genreShelfGood": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:good"
             ]
@@ -46711,7 +47237,9 @@
         "id": "RDCLAK5uy_nU-8tsTJccPKgam0dRyl65IG7KDGsu1f8",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:party"
           ]
@@ -46730,7 +47258,9 @@
         "Search:genreShelfParty": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:party"
             ]
@@ -46743,7 +47273,9 @@
         "id": "RDCLAK5uy_nY_4tOjk2a_pNtiplJ_96RH0Hi5PQB5OQ",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:hip-hop"
           ]
@@ -46762,7 +47294,9 @@
         "Search:genreShelfHiphop": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:hip-hop"
             ]
@@ -46775,7 +47309,9 @@
         "id": "RDCLAK5uy_nYonIJ562G-N9flfOyDmQY9GZ1A3k52Po",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:cpop"
           ]
@@ -46794,7 +47330,9 @@
         "vector:vector_systemlist_zh_genre_cpop": {
           "lastSeenAt": "2026-09-23T08:17:24Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:cpop"
             ]
@@ -46843,7 +47381,9 @@
         "id": "RDCLAK5uy_n_sz-xNYVBufENsdri7PFhP8ybpfkIlck",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "genre:cpop"
           ]
@@ -46862,7 +47402,9 @@
         "vector:vector_systemlist_zh_genre_cpop": {
           "lastSeenAt": "2026-09-23T08:17:24Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "genre:cpop"
             ]
@@ -46875,7 +47417,9 @@
         "id": "RDCLAK5uy_nhSTJDYjFhwODP-S1ofc--v8NiGnxbcc8",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:party"
           ]
@@ -46894,7 +47438,9 @@
         "Search:genreShelfParty": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:party"
             ]
@@ -46907,7 +47453,9 @@
         "id": "RDCLAK5uy_njdy_HiubBudgweb1_0Ld1xQ52shJ8uHk",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:good"
           ]
@@ -46934,7 +47482,9 @@
         "vector:vector_systemlist_zh_mood_good_mood": {
           "lastSeenAt": "2026-09-22T22:59:28Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:good"
             ]
@@ -47884,7 +48434,9 @@
         "id": "RDCLAK5uy_npkiQvDU863KxBgX_eaYo-LCIuM3qZtqo",
         "kind": "playlist",
         "rankingMetadata": {
-          "editorialSignals": [],
+          "editorialSignals": [
+
+          ],
           "topics": [
             "mood:commute",
             "mood:good"
@@ -47904,7 +48456,9 @@
         "Search:genreShelfCommute": {
           "lastSeenAt": "2026-09-23T08:17:20Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:commute"
             ]
@@ -47921,7 +48475,9 @@
         "vector:vector_systemlist_zh_mood_good_mood": {
           "lastSeenAt": "2026-09-22T22:59:28Z",
           "ranking": {
-            "editorialSignals": [],
+            "editorialSignals": [
+
+            ],
             "topics": [
               "mood:good"
             ]
@@ -48944,7 +49500,9 @@
           "editorialSignals": [
             "discovery"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "25 首",
         "thumbnailSize": {
@@ -48963,7 +49521,9 @@
             "editorialSignals": [
               "discovery"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       }
@@ -48976,7 +49536,9 @@
           "editorialSignals": [
             "discovery"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "25 首",
         "thumbnailSize": {
@@ -48995,7 +49557,9 @@
             "editorialSignals": [
               "discovery"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       }
@@ -49008,7 +49572,9 @@
           "editorialSignals": [
             "discovery"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "25 首",
         "thumbnailSize": {
@@ -49027,7 +49593,9 @@
             "editorialSignals": [
               "discovery"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       }
@@ -49040,7 +49608,9 @@
           "editorialSignals": [
             "discovery"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "25 首",
         "thumbnailSize": {
@@ -49059,7 +49629,9 @@
             "editorialSignals": [
               "discovery"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       }
@@ -49072,7 +49644,9 @@
           "editorialSignals": [
             "discovery"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "25 首",
         "thumbnailSize": {
@@ -49091,7 +49665,9 @@
             "editorialSignals": [
               "discovery"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       }
@@ -49104,7 +49680,9 @@
           "editorialSignals": [
             "discovery"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "25 首",
         "thumbnailSize": {
@@ -49123,7 +49701,9 @@
             "editorialSignals": [
               "discovery"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       }
@@ -49136,7 +49716,9 @@
           "editorialSignals": [
             "discovery"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "25 首",
         "thumbnailSize": {
@@ -49155,7 +49737,9 @@
             "editorialSignals": [
               "discovery"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       }
@@ -49168,7 +49752,9 @@
           "editorialSignals": [
             "discovery"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "25 首",
         "thumbnailSize": {
@@ -49187,7 +49773,9 @@
             "editorialSignals": [
               "discovery"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       }
@@ -49200,7 +49788,9 @@
           "editorialSignals": [
             "discovery"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "25 首",
         "thumbnailSize": {
@@ -49219,7 +49809,9 @@
             "editorialSignals": [
               "discovery"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       }
@@ -49232,7 +49824,9 @@
           "editorialSignals": [
             "discovery"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "25 首",
         "thumbnailSize": {
@@ -49251,7 +49845,9 @@
             "editorialSignals": [
               "discovery"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       }
@@ -49264,7 +49860,9 @@
           "editorialSignals": [
             "discovery"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "25 首",
         "thumbnailSize": {
@@ -49283,7 +49881,9 @@
             "editorialSignals": [
               "discovery"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       }
@@ -49296,7 +49896,9 @@
           "editorialSignals": [
             "discovery"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "25 首",
         "thumbnailSize": {
@@ -49315,7 +49917,9 @@
             "editorialSignals": [
               "discovery"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       }
@@ -49328,7 +49932,9 @@
           "editorialSignals": [
             "discovery"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "25 首",
         "thumbnailSize": {
@@ -49347,7 +49953,9 @@
             "editorialSignals": [
               "discovery"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       },
@@ -49621,7 +50229,9 @@
           "editorialSignals": [
             "discovery"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "25 首",
         "thumbnailSize": {
@@ -49640,7 +50250,9 @@
             "editorialSignals": [
               "discovery"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       }
@@ -49653,7 +50265,9 @@
           "editorialSignals": [
             "discovery"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "25 首",
         "thumbnailSize": {
@@ -49672,7 +50286,9 @@
             "editorialSignals": [
               "discovery"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       }
@@ -49685,7 +50301,9 @@
           "editorialSignals": [
             "discovery"
           ],
-          "topics": []
+          "topics": [
+
+          ]
         },
         "subtitle": "25 首",
         "thumbnailSize": {
@@ -49704,7 +50322,9 @@
             "editorialSignals": [
               "discovery"
             ],
-            "topics": []
+            "topics": [
+
+            ]
           }
         }
       }
