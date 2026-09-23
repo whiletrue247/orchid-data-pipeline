@@ -9,9 +9,8 @@ module OrchidPipeline
       end
 
       def vectors(limit)
-        # Home already supplies charts/latest/featured. Rotate genre coverage, including a bounded second page.
-        @store.vectors.select { |id,v| id.include?('_genre_') || id.include?('_mood_') }
-          .sort_by { |id,v| [@store.time(v['lastAttemptAt']), id] }.first(limit).map(&:first)
+        # Keep every discovered music route. Rotate by attempt age, with Asian routes first on ties.
+        @store.vectors.sort_by { |id,v| [@store.time(v['lastAttemptAt']), id.match?(/_(cpop|kpop|jpop|hk)\z/) ? 0 : 1, id] }.first(limit).map(&:first)
       end
 
       def playlists(limit)
@@ -26,7 +25,11 @@ module OrchidPipeline
         existing, unknown = due.partition { |item| @store.fresh?(item) }
         maintenance = existing.sort_by { |item| [@store.time(item.dig('tracks','validatedAt')) + refresh_interval(item), item.dig('collection','id')] }
         chosen = maintenance.shift([limit/3, existing.length].min)
-        groups = (unknown + maintenance).group_by { |item| bucket(item) }
+        # Prewarm today's Home in its actual section/item order before generic expansion.
+        home = (unknown + maintenance).select { |item| Metadata.home_order(@store.ranking(item)) < 1_000_000 }
+          .sort_by { |item| [Metadata.home_order(@store.ranking(item)), @store.time(item['lastAttemptAt'])] }
+        chosen.concat(home.first(limit-chosen.length))
+        groups = (unknown + maintenance - chosen).group_by { |item| bucket(item) }
         groups.each_value { |items| items.sort_by! { |x| [@store.time(x['lastAttemptAt']), -@store.time(x['lastSeenAt']).to_i, x.dig('collection','id')] } }
         allocated = Hash.new(0)
         while chosen.length < limit && !groups.empty?

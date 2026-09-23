@@ -10,7 +10,7 @@ module OrchidPipeline
 
       def publish(stats)
         grouped = @store.candidates.values.select { |x| @store.eligible?(x) }
-          .sort_by { |x| [x['firstSeenAt'], x.dig('collection','id')] }
+          .sort_by { |x| [Metadata.home_order(@store.ranking(x)), x['firstSeenAt'], x.dig('collection','id')] }
           .group_by { |x| CanonicalJSON.sha256(x['tracks']['payload'].map { |t| t['id'] }.sort) }
         collections = grouped.values.map do |group|
           item = group.first
@@ -32,7 +32,7 @@ module OrchidPipeline
           'hydratedPlaylistCount'=>collections.length, 'vectorCount'=>@store.vectors.length}})
         version = catalog.fetch('sha256')
         current = {'schemaVersion'=>1, 'contentVersion'=>version, 'generatedAt'=>@now.call.iso8601,
-          'source'=>'orchid-discovery-v3', 'deliveryPolicy'=>'verified-only',
+          'source'=>'orchid-discovery-v4', 'deliveryPolicy'=>'verified-only',
           'region'=>{'regionCode'=>'TW','languageTag'=>'zh-TW'},
           'catalog'=>catalog.merge('collectionCount'=>collections.length)}
         content_changed = previous&.fetch('contentVersion', nil) != version
@@ -51,6 +51,9 @@ module OrchidPipeline
 
       def health(stats, current = manifest)
         @store.atomic(File.join(@output, 'health.json'), stats.merge('schemaVersion'=>2,
+          'homeObservedCount'=>@store.candidates.values.count { |x| Metadata.home_order(@store.ranking(x)) < 1_000_000 },
+          'homeVerifiedCount'=>@store.candidates.values.count { |x| Metadata.home_order(@store.ranking(x)) < 1_000_000 && @store.eligible?(x) },
+          'homeOpeningMissingIDs'=>@store.candidates.values.select { |x| Array(@store.ranking(x)['placements']).any? { |p| p['surface']=='Home' && p['sectionID']=='recommendPlaylists' } && !@store.eligible?(x) }.map { |x| x.dig('collection','id') },
           'checkedAt'=>@now.call.iso8601, 'contentVersion'=>current&.fetch('contentVersion', nil),
           'collectionCount'=>current&.dig('catalog','collectionCount') || 0,
           'candidateCount'=>@store.candidates.length, 'knownVectorCount'=>@store.vectors.length,

@@ -70,6 +70,16 @@ class DiscoverySyncTest < Minitest::Test
     end
   end
 
+  def test_recorded_home_keeps_twenty_seed_mixes_ahead_of_charts_and_moods
+    body=JSON.parse(File.read(File.join(__dir__,'fixtures/mbplayer_home.json')))
+    source=D::MBPlayerSource.new(Transport.new { |_| response(body) })
+    rows=source.page('Home')[:collections]
+    assert_equal 60,rows.length
+    expected=body['items'].select { |s| s['id']=='recommendPlaylists' }.flat_map { |s| s['items'].map { |x| x['ref'] } }
+    assert_equal expected,rows.first(20).map { |x| x[0]['id'] }
+    assert_equal [1,2],rows.first(20).flat_map { |x| x[0]['rankingMetadata']['placements'].map { |p| p['sectionRank'] } }.uniq
+  end
+
   def test_page_adapter_keeps_music_only_and_source_topics
     t=transport
     source=D::MBPlayerSource.new(t)
@@ -77,7 +87,43 @@ class DiscoverySyncTest < Minitest::Test
     assert_includes page[:vectors], 'vector_systemlist_zh_mood_commute'
     assert_equal ['c'], page[:collections].map { |x| x.first['id'] }
     assert_equal ['mood:commute'], page[:collections][0][0]['rankingMetadata']['topics']
-    assert_equal '{}', t.requests[0][:body]
+    assert_equal 'GET', t.requests[0][:method]
+    assert_nil t.requests[0][:body]
+  end
+
+  def test_home_positions_replace_old_membership_and_drive_prewarming
+    body={'items'=>[
+      {'type'=>'carousel','id'=>'recommendPlaylists','title'=>'為你推薦','items'=>[raw('z'),raw('y')]},
+      {'type'=>'carousel','id'=>'recommendPlaylists','title'=>'更多好歌','items'=>[raw('x')]},
+      {'type'=>'carousel','id'=>'podcasts','items'=>[raw('not-music')]}
+    ]}
+    source=D::MBPlayerSource.new(Transport.new { |_| response(body) })
+    rows=source.page('Home')[:collections]
+    assert_equal %w[z y x],rows.map { |x| x[0]['id'] }
+    assert_equal [0,1,1000],rows.map { |x| D::Metadata.home_order(x[0]['rankingMetadata']) }
+    s=store
+    s.replace_page('Home',rows)
+    assert_equal %w[z y x], D::Scheduler.new(s,now:-> {@now}).playlists(3).map { |x| x['collection']['id'] }
+    s.replace_page('Home',rows.last(1))
+    assert_equal 1_000_000,D::Metadata.home_order(s.ranking(s.candidates['z']))
+    assert_equal 1000,D::Metadata.home_order(s.ranking(s.candidates['x']))
+  end
+
+  def test_vectors_continue_beyond_three_pages_until_actual_source_exhaustion
+    body={'items'=>24.times.map { |i| raw("p#{i}") },'total'=>120}
+    source=D::MBPlayerSource.new(Transport.new { |_| response(body) })
+    refute source.vector('vector_systemlist_zh_genre_cpop',offset:72,limit:24)[:exhausted]
+    assert source.vector('vector_systemlist_zh_genre_cpop',offset:96,limit:24)[:exhausted]
+    s=sync
+    s.store.register_vectors(['vector_systemlist_zh_genre_cpop'])
+    s.store.vectors['vector_systemlist_zh_genre_cpop']['nextOffset']=72
+    t=transport;base=t.handler
+    t.handler=->(r) { r[:path]=='/api/getVector' ? response(body) : base.call(r) }
+    s=D::Sync.new(transport:t,output:@out,state:@state,now:-> {@now},minimum:1,vector_limit:1,logger:-> (_) {})
+    s.store.register_vectors(['vector_systemlist_zh_genre_cpop'])
+    s.store.vectors['vector_systemlist_zh_genre_cpop']['nextOffset']=72
+    s.run
+    assert_equal 96,s.store.vectors['vector_systemlist_zh_genre_cpop']['nextOffset']
   end
 
   def test_full_build_publishes_complete_graph_with_topics_and_no_preview_as_full_list

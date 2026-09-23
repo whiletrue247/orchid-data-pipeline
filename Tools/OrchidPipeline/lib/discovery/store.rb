@@ -24,6 +24,13 @@ module OrchidPipeline
         ids.each { |id| (vectors[id] ||= {'nextOffset'=>0})['lastSeenAt'] = timestamp }
       end
 
+      # A successful page replaces its own memberships; old Home positions must not
+      # survive a new editorial selection. Other vector memberships remain intact.
+      def replace_page(name, rows)
+        candidates.each_value { |item| item.fetch('sources', {}).delete_if { |key,_| key.start_with?("#{name}:") } }
+        ingest(rows)
+      end
+
       def ingest(rows)
         rows.each do |collection, source|
           id = collection.fetch('id')

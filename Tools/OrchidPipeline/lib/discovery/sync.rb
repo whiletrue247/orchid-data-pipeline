@@ -28,7 +28,7 @@ module OrchidPipeline
           %w[Home Search].each do |name|
             attempt("page:#{name}") do
               page = @source.page(name)
-              store.ingest(page[:collections])
+              store.replace_page(name, page[:collections])
               store.register_vectors(page[:vectors])
               store.data['pages'][name] = {'lastSuccessAt'=>store.timestamp, 'collectionCount'=>page[:collections].length}
               @stats['pageReadCount'] += 1
@@ -42,8 +42,8 @@ module OrchidPipeline
               page = @source.vector(id, offset: offset, limit: @page_size)
               store.ingest(page[:collections])
               progress['lastSuccessAt'] = store.timestamp
-              # Explore at most three current pages; never resurrect the unbounded historical archive.
-              progress['nextOffset'] = page[:count] < @page_size || offset >= @page_size*2 ? 0 : offset+@page_size
+              # Continue until the source is exhausted; the request budget bounds work, not catalog depth.
+              progress['nextOffset'] = page[:exhausted] ? 0 : offset+page[:count]
               @stats['vectorReadCount'] += 1
             end
           end

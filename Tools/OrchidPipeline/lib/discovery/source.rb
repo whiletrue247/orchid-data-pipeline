@@ -27,17 +27,26 @@ module OrchidPipeline
                  'recommendPlaylists'=>'discovery', 'genreMoodPlaylists'=>'curated'}.freeze
       module_function
 
-      def ranking(vector: nil, shelf: nil, tags: [], id: nil)
+      def ranking(vector: nil, shelf: nil, tags: [], id: nil, title: nil, placement: nil)
         suffix = vector.to_s.sub(/\Avector_systemlist_zh_(genre|mood)_/, '')
         topics = [TOPICS[suffix], CHART_TOPICS[id]] + Array(tags).filter_map { |t| TAGS[t.to_s.downcase] }
+        topics << 'genre:kpop' if title.to_s.match?(/K[ -]?Pop|韓流|韓語/i)
+        topics << 'genre:jpop' if title.to_s.match?(/J[ -]?Pop|日語/i)
+        topics << 'genre:cpop' if title.to_s.match?(/華語|台語/)
         signal = SHELVES[shelf] || {'vector_latest_zh'=>'latest', 'vector_featured_zh'=>'featured',
           'vector_systemlist_zh_top_charts'=>'charts'}[vector]
-        {'topics'=>topics.compact.uniq.sort, 'editorialSignals'=>[signal].compact}
+        {'topics'=>topics.compact.uniq.sort, 'editorialSignals'=>[signal].compact, 'placements'=>[placement].compact}
       end
 
       def merge(*values)
         {'topics'=>values.flat_map { |x| Array(x&.fetch('topics', nil)) }.uniq.sort,
-         'editorialSignals'=>values.flat_map { |x| Array(x&.fetch('editorialSignals', nil)) }.uniq.sort}
+         'editorialSignals'=>values.flat_map { |x| Array(x&.fetch('editorialSignals', nil)) }.uniq.sort,
+         'placements'=>values.flat_map { |x| Array(x&.fetch('placements', nil)) }.uniq}
+      end
+
+      def home_order(ranking)
+        Array(ranking['placements']).select { |p| p['surface']=='Home' }
+          .map { |p| p.fetch('sectionRank')*1000+p.fetch('itemRank') }.min || 1_000_000
       end
     end
 
@@ -49,26 +58,33 @@ module OrchidPipeline
 
       def page(name)
         path = name == 'Home' ? '/api/getPage' : '/api/page/getSearch'
-        root = json(method: 'POST', path: path, query: {'page'=>name}, body: '{}')
+        root = json(method: name == 'Home' ? 'POST' : 'GET', path: path, query: {'page'=>name}, body: name == 'Home' ? '{}' : nil)
         items = items!(root)
         vectors = PayloadParser.vector_ids(root)
         collections = []
-        visit = lambda do |rows, shelf, vector|
-          rows.each do |raw|
+        visit = lambda do |rows, shelf, vector, section_rank, section_title|
+          rows.each_with_index do |raw, index|
             next unless raw.is_a?(Hash)
             if %w[carousel wrapContainer].include?(raw['type'])
+              child_shelf = raw['id'] || shelf
+              next if name == 'Home' && raw['type']=='carousel' && !Metadata::SHELVES.key?(child_shelf)
               child_vector = raw['vectorId']
               vectors << child_vector if valid_vector?(child_vector)
-              visit.call(Array(raw['items']), raw['id'] || shelf, child_vector || vector)
+              visit.call(Array(raw['items']), child_shelf, child_vector || vector,
+                section_rank || index, raw['title'] || section_title)
             elsif raw['type'] == 'playlist'
               collection = PayloadParser.collections({'items'=>[raw]}).first
-              next unless collection
-              collection['rankingMetadata'] = Metadata.ranking(vector: vector, shelf: shelf, tags: raw['tags'], id: collection['id'])
-              collections << [collection, "#{name}:#{shelf || 'other'}"]
+              next unless collection && raw['size'] != 0
+              placement = {'surface'=>name, 'sectionID'=>shelf || 'other', 'sectionTitle'=>section_title,
+                'sectionRank'=>section_rank || 0, 'itemRank'=>index, 'vectorID'=>vector}.compact
+              collection['rankingMetadata'] = Metadata.ranking(vector: vector, shelf: shelf, tags: raw['tags'],
+                id: collection['id'], title: collection['title'], placement: placement)
+              collections << [collection, "#{name}:#{section_rank}:#{shelf || 'other'}"]
             end
           end
         end
-        visit.call(items, nil, nil)
+        visit.call(items, nil, nil, nil, nil)
+        raise HTTPError, 'Home has no usable music shelves.' if name=='Home' && collections.empty?
         {collections: collections, vectors: vectors.select { |id| valid_vector?(id) }.uniq}
       end
 
@@ -79,10 +95,13 @@ module OrchidPipeline
         items = items!(root)
         collections = PayloadParser.collections(root).map do |collection|
           raw = items.find { |x| x.is_a?(Hash) && x['ref'].to_s == collection['id'] } || {}
-          collection['rankingMetadata'] = Metadata.ranking(vector: id, tags: raw['tags'], id: collection['id'])
+          collection['rankingMetadata'] = Metadata.ranking(vector: id, tags: raw['tags'], id: collection['id'], title: collection['title'])
           [collection, "vector:#{id}"]
         end
-        {collections: collections, count: items.length}
+        page = root['getVector'] || root
+        total = Integer(page['total'], exception: false)
+        exhausted = items.empty? || (total ? offset+items.length >= total : items.length < limit)
+        {collections: collections, count: items.length, exhausted: exhausted}
       end
 
       def playlist(id, etag: nil)
@@ -122,7 +141,7 @@ module OrchidPipeline
       end
 
       def valid_vector?(id)
-        id.is_a?(String) && id.match?(/\Avector_[A-Za-z0-9_]+\z/) && !id.start_with?('vector_artists_')
+        id.is_a?(String) && id.match?(/\Avector_[A-Za-z0-9_]+\z/) && !id.start_with?('vector_artists_') && !id.include?('podcast')
       end
     end
   end
