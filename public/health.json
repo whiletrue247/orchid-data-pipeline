@@ -1,22 +1,29 @@
 {
-  "candidateCount": 564,
+  "candidateCount": 647,
   "changed": true,
-  "checkedAt": "2026-09-23T22:56:30Z",
-  "collectionCount": 124,
+  "checkedAt": "2026-09-24T04:45:11Z",
+  "collectionCount": 136,
   "contentChanged": true,
-  "contentVersion": "58f8475d081f1112273907b37004c6caf61929cc9560aa85100f19576dd31667",
+  "contentVersion": "9043b34b594791675c3e728f880d84838d7856c5392f8cb8b482589b7d6126bf",
   "deliveryPolicy": "verified-only",
   "duplicateCollectionCount": 0,
   "failures": [
-
+    {
+      "reason": "Playlist response is incomplete.",
+      "resource": "playlist:RDCLAK5uy_l2TM_OtxemStsZKi_LTP5F3RhYH8FGZDU"
+    },
+    {
+      "reason": "Playlist response is incomplete.",
+      "resource": "playlist:RDCLAK5uy_nnF2-hklIXSM7GRyM5jmvB2MHGPNS-wI8"
+    }
   ],
   "halted": false,
   "homeObservedCount": 60,
   "homeOpeningMissingIDs": [
 
   ],
-  "homeVerifiedCount": 41,
-  "knownVectorCount": 32,
+  "homeVerifiedCount": 45,
+  "knownVectorCount": 33,
   "pageReadCount": 2,
   "publication": "published",
   "refreshDueCollectionCount": 0,
@@ -27,23 +34,23 @@
     "genre:country": 2,
     "genre:cpop": 6,
     "genre:electronic-dance": 5,
-    "genre:hip-hop": 8,
+    "genre:hip-hop": 9,
     "genre:jazz": 1,
     "genre:jpop": 3,
     "genre:kpop": 2,
     "genre:pop": 4,
-    "mood:commute": 3,
-    "mood:focus": 1,
+    "mood:chill": 1,
+    "mood:energy": 2,
     "mood:good": 8,
-    "mood:party": 4,
+    "mood:party": 2,
     "mood:romance": 5,
     "mood:sleep": 7,
     "mood:travel": 10
   },
-  "trackCount": 6004,
+  "trackCount": 6553,
   "unavailableCount": 0,
-  "uniqueTrackCount": 5108,
-  "upstreamFailures": 0,
-  "validatedPlaylistCount": 18,
+  "uniqueTrackCount": 5590,
+  "upstreamFailures": 2,
+  "validatedPlaylistCount": 16,
   "vectorReadCount": 2
 }
