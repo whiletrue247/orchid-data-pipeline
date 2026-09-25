@@ -1,10 +1,10 @@
 {
-  "candidateCount": 975,
+  "candidateCount": 1017,
   "changed": true,
-  "checkedAt": "2026-09-25T13:44:18Z",
+  "checkedAt": "2026-09-25T18:34:30Z",
   "collectionCount": 146,
   "contentChanged": true,
-  "contentVersion": "a112551506c38dafdc5e0dc282db07694c476a057afe79bfd4ea4a351ff1dbb3",
+  "contentVersion": "b803766b1a50f7b7b1a449d45f25257e610f3ed2737174cfe4ff2e63cfc3e87e",
   "deliveryPolicy": "verified-only",
   "duplicateCollectionCount": 0,
   "failures": [
@@ -23,10 +23,6 @@
     {
       "reason": "Playlist response is incomplete.",
       "resource": "playlist:RDCLAK5uy_mLYA6tThqY-xoXY-sWXVLj5JjTMTjfzsg"
-    },
-    {
-      "reason": "Playlist response is incomplete.",
-      "resource": "playlist:RDCLAK5uy_mhmPRtdsF1Qcf-4iiXifBtxNVpsUJhnM4"
     }
   ],
   "halted": false,
@@ -34,19 +30,19 @@
   "homeOpeningMissingIDs": [
 
   ],
-  "homeVerifiedCount": 41,
+  "homeVerifiedCount": 37,
   "knownVectorCount": 33,
   "pageReadCount": 2,
   "publication": "published",
-  "refreshDueCollectionCount": 57,
+  "refreshDueCollectionCount": 61,
   "retryAfterUntil": null,
   "schemaVersion": 2,
   "topicCoverage": {
     "era:evergreen": 6,
     "genre:country": 2,
-    "genre:cpop": 7,
+    "genre:cpop": 8,
     "genre:electronic-dance": 5,
-    "genre:hip-hop": 12,
+    "genre:hip-hop": 9,
     "genre:indie": 1,
     "genre:jazz": 1,
     "genre:jpop": 3,
@@ -54,20 +50,20 @@
     "genre:pop": 4,
     "genre:rock": 3,
     "genre:soundtrack": 1,
-    "mood:chill": 3,
-    "mood:commute": 3,
+    "mood:chill": 4,
+    "mood:commute": 2,
     "mood:dinner": 1,
     "mood:energy": 4,
-    "mood:good": 11,
+    "mood:good": 12,
     "mood:party": 2,
     "mood:romance": 5,
     "mood:sleep": 7,
     "mood:travel": 10
   },
-  "trackCount": 7080,
+  "trackCount": 7056,
   "unavailableCount": 0,
-  "uniqueTrackCount": 6044,
-  "upstreamFailures": 5,
-  "validatedPlaylistCount": 13,
+  "uniqueTrackCount": 6043,
+  "upstreamFailures": 4,
+  "validatedPlaylistCount": 14,
   "vectorReadCount": 2
 }
