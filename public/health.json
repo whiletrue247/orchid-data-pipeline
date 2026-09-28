@@ -1,50 +1,31 @@
 {
-  "candidateCount": 1467,
+  "candidateCount": 1491,
   "changed": true,
-  "checkedAt": "2026-09-28T13:48:31Z",
-  "collectionCount": 162,
+  "checkedAt": "2026-09-28T20:33:05Z",
+  "collectionCount": 165,
   "contentChanged": true,
-  "contentVersion": "f20240a4d78cd1b5617604fbcaba2a926d74b61b19e019634341b84b84390a94",
+  "contentVersion": "fac42c9ea8a886b8837c46c2009934537f3cdd3fdba9edd4ec3924d440b01af3",
   "deliveryPolicy": "verified-only",
   "duplicateCollectionCount": 0,
   "failures": [
-    {
-      "reason": "Playlist response is incomplete.",
-      "resource": "playlist:RDCLAK5uy_n7QjhERM2Q4Ha5B6t6ZmzyhOtRYjQtxKk"
-    },
-    {
-      "reason": "Playlist response is incomplete.",
-      "resource": "playlist:RDCLAK5uy_nN9WdsPpNl84-9vgYCnNssJyZ_Pgt25fU"
-    },
-    {
-      "reason": "Playlist response is incomplete.",
-      "resource": "playlist:RDCLAK5uy_mLYA6tThqY-xoXY-sWXVLj5JjTMTjfzsg"
-    },
-    {
-      "reason": "Playlist response is incomplete.",
-      "resource": "playlist:RDCLAK5uy_npkiQvDU863KxBgX_eaYo-LCIuM3qZtqo"
-    },
-    {
-      "reason": "Playlist response is incomplete.",
-      "resource": "playlist:RDCLAK5uy_m-MIH8e5UE7ERgHzrDjfMRhP-S-lWdzu4"
-    }
+
   ],
   "halted": false,
   "homeObservedCount": 60,
   "homeOpeningMissingIDs": [
 
   ],
-  "homeVerifiedCount": 39,
+  "homeVerifiedCount": 37,
   "knownVectorCount": 33,
   "pageReadCount": 2,
   "publication": "published",
-  "refreshDueCollectionCount": 86,
+  "refreshDueCollectionCount": 91,
   "retryAfterUntil": null,
   "schemaVersion": 2,
   "topicCoverage": {
     "era:evergreen": 6,
     "genre:country": 3,
-    "genre:cpop": 6,
+    "genre:cpop": 10,
     "genre:electronic-dance": 6,
     "genre:hip-hop": 9,
     "genre:indie": 4,
@@ -55,20 +36,20 @@
     "genre:rock": 5,
     "genre:soundtrack": 1,
     "mood:chill": 3,
-    "mood:commute": 2,
+    "mood:commute": 6,
     "mood:dinner": 2,
     "mood:energy": 6,
-    "mood:good": 11,
-    "mood:party": 3,
+    "mood:good": 12,
+    "mood:party": 2,
     "mood:romance": 5,
     "mood:sad": 1,
     "mood:sleep": 10,
     "mood:travel": 11
   },
-  "trackCount": 7859,
+  "trackCount": 7934,
   "unavailableCount": 0,
-  "uniqueTrackCount": 6638,
-  "upstreamFailures": 5,
-  "validatedPlaylistCount": 13,
+  "uniqueTrackCount": 6661,
+  "upstreamFailures": 0,
+  "validatedPlaylistCount": 18,
   "vectorReadCount": 2
 }
