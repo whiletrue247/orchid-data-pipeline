@@ -1,16 +1,24 @@
 {
   "candidateCount": 1523,
   "changed": true,
-  "checkedAt": "2026-09-29T01:55:07Z",
-  "collectionCount": 166,
+  "checkedAt": "2026-09-29T08:26:19Z",
+  "collectionCount": 167,
   "contentChanged": true,
-  "contentVersion": "f42fac820b520a00bb10a88d61b3f2d0f8eeb1083a00a3ccdf469d84ca5b4d1c",
+  "contentVersion": "aed4cd2e299ae4f367d5bf880b23855e4aaeb427bd59d85a51e17f1692b31d93",
   "deliveryPolicy": "verified-only",
   "duplicateCollectionCount": 0,
   "failures": [
     {
       "reason": "Playlist response is incomplete.",
-      "resource": "playlist:RDCLAK5uy_kw2wIlEv9llILhO0qoMTLsBBhmjzuibAc"
+      "resource": "playlist:RDCLAK5uy_n64_P7t3MmbTu7jziSk48DL-oRWO98CPE"
+    },
+    {
+      "reason": "Playlist response is incomplete.",
+      "resource": "playlist:RDCLAK5uy_nEOENcLJBr5ZWcX5KsRFqlkLp05vN23Yk"
+    },
+    {
+      "reason": "Playlist response is incomplete.",
+      "resource": "playlist:RDCLAK5uy_m-MIH8e5UE7ERgHzrDjfMRhP-S-lWdzu4"
     }
   ],
   "halted": false,
@@ -22,15 +30,15 @@
   "knownVectorCount": 33,
   "pageReadCount": 2,
   "publication": "published",
-  "refreshDueCollectionCount": 87,
+  "refreshDueCollectionCount": 91,
   "retryAfterUntil": null,
   "schemaVersion": 2,
   "topicCoverage": {
     "era:evergreen": 6,
     "genre:country": 3,
-    "genre:cpop": 7,
+    "genre:cpop": 9,
     "genre:electronic-dance": 6,
-    "genre:hip-hop": 9,
+    "genre:hip-hop": 10,
     "genre:indie": 4,
     "genre:jazz": 3,
     "genre:jpop": 3,
@@ -38,21 +46,21 @@
     "genre:pop": 4,
     "genre:rock": 5,
     "genre:soundtrack": 1,
-    "mood:chill": 4,
-    "mood:commute": 7,
+    "mood:chill": 3,
+    "mood:commute": 8,
     "mood:dinner": 2,
     "mood:energy": 7,
-    "mood:good": 12,
+    "mood:good": 11,
     "mood:party": 2,
     "mood:romance": 5,
     "mood:sad": 1,
     "mood:sleep": 10,
     "mood:travel": 11
   },
-  "trackCount": 7984,
+  "trackCount": 8012,
   "unavailableCount": 0,
-  "uniqueTrackCount": 6677,
-  "upstreamFailures": 1,
-  "validatedPlaylistCount": 17,
+  "uniqueTrackCount": 6680,
+  "upstreamFailures": 3,
+  "validatedPlaylistCount": 15,
   "vectorReadCount": 2
 }
