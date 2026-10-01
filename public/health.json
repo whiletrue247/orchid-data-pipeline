@@ -1,10 +1,10 @@
 {
-  "candidateCount": 1533,
+  "candidateCount": 1546,
   "changed": true,
-  "checkedAt": "2026-10-01T01:17:56Z",
+  "checkedAt": "2026-10-01T08:53:18Z",
   "collectionCount": 162,
   "contentChanged": true,
-  "contentVersion": "c95e118c8df1bbd762f337efefd1da793909efba9ae954c947ab69c04d2be6ee",
+  "contentVersion": "5d6044cd2d6ed3a3efa1310fd23b76ecd26c691b4c5f39c36414bae4e85fd8c2",
   "deliveryPolicy": "verified-only",
   "duplicateCollectionCount": 0,
   "failures": [
@@ -15,11 +15,11 @@
   "homeOpeningMissingIDs": [
 
   ],
-  "homeVerifiedCount": 39,
+  "homeVerifiedCount": 37,
   "knownVectorCount": 33,
   "pageReadCount": 2,
   "publication": "published",
-  "refreshDueCollectionCount": 71,
+  "refreshDueCollectionCount": 83,
   "retryAfterUntil": null,
   "schemaVersion": 2,
   "topicCoverage": {
@@ -35,19 +35,19 @@
     "genre:pop": 4,
     "genre:rock": 5,
     "genre:soundtrack": 1,
-    "mood:chill": 6,
-    "mood:commute": 5,
+    "mood:chill": 4,
+    "mood:commute": 6,
     "mood:dinner": 2,
     "mood:energy": 6,
     "mood:good": 10,
-    "mood:party": 2,
+    "mood:party": 3,
     "mood:romance": 4,
     "mood:sleep": 10,
     "mood:travel": 11
   },
-  "trackCount": 7335,
+  "trackCount": 7368,
   "unavailableCount": 0,
-  "uniqueTrackCount": 6006,
+  "uniqueTrackCount": 6041,
   "upstreamFailures": 0,
   "validatedPlaylistCount": 18,
   "vectorReadCount": 2
