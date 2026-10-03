@@ -1,33 +1,40 @@
 {
-  "candidateCount": 1529,
+  "candidateCount": 1543,
   "changed": true,
-  "checkedAt": "2026-10-03T19:14:45Z",
-  "collectionCount": 164,
+  "checkedAt": "2026-10-03T23:01:11Z",
+  "collectionCount": 165,
   "contentChanged": true,
-  "contentVersion": "26b62ff977978dc5acd2778a51c34c9d46dc6b184a5340d326e43c3924297940",
+  "contentVersion": "90c9e43f3f7583881f8fe84d8479023b68fbe5c8d0f29da35157fb91dcaa0c04",
   "deliveryPolicy": "verified-only",
   "duplicateCollectionCount": 0,
   "failures": [
-
+    {
+      "reason": "Playlist response is incomplete.",
+      "resource": "playlist:RDCLAK5uy_nVQAtE2KBWk-ROQIc5o39Oup3hOLnYV0g"
+    },
+    {
+      "reason": "Playlist response is incomplete.",
+      "resource": "playlist:RDCLAK5uy_lN7cCzqFOTV83PeDYGf_6N0DiMF4Pnl2E"
+    }
   ],
   "halted": false,
   "homeObservedCount": 60,
   "homeOpeningMissingIDs": [
 
   ],
-  "homeVerifiedCount": 37,
+  "homeVerifiedCount": 40,
   "knownVectorCount": 33,
   "pageReadCount": 2,
   "publication": "published",
-  "refreshDueCollectionCount": 58,
+  "refreshDueCollectionCount": 60,
   "retryAfterUntil": null,
   "schemaVersion": 2,
   "topicCoverage": {
     "era:evergreen": 6,
     "genre:country": 4,
-    "genre:cpop": 9,
+    "genre:cpop": 7,
     "genre:electronic-dance": 7,
-    "genre:hip-hop": 5,
+    "genre:hip-hop": 6,
     "genre:indie": 4,
     "genre:jazz": 3,
     "genre:jpop": 3,
@@ -35,21 +42,21 @@
     "genre:pop": 5,
     "genre:rock": 5,
     "genre:soundtrack": 1,
-    "mood:chill": 3,
-    "mood:commute": 6,
+    "mood:chill": 4,
+    "mood:commute": 7,
     "mood:dinner": 2,
     "mood:energy": 7,
-    "mood:focus": 2,
+    "mood:focus": 3,
     "mood:good": 11,
     "mood:party": 3,
     "mood:romance": 4,
     "mood:sleep": 10,
     "mood:travel": 11
   },
-  "trackCount": 7600,
+  "trackCount": 7724,
   "unavailableCount": 0,
-  "uniqueTrackCount": 6304,
-  "upstreamFailures": 0,
-  "validatedPlaylistCount": 18,
+  "uniqueTrackCount": 6428,
+  "upstreamFailures": 2,
+  "validatedPlaylistCount": 16,
   "vectorReadCount": 2
 }
