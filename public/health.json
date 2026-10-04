@@ -1,35 +1,32 @@
 {
-  "candidateCount": 1520,
+  "candidateCount": 1510,
   "changed": true,
-  "checkedAt": "2026-10-04T18:09:23Z",
-  "collectionCount": 165,
+  "checkedAt": "2026-10-04T21:20:57Z",
+  "collectionCount": 166,
   "contentChanged": true,
-  "contentVersion": "f1214c984dc91f5e73ba49bf187b849c461fae298bee0b4c316f3ea26bc09c0d",
+  "contentVersion": "6c56c1608e3399e9311148a6e7265c7031ceda95b8b4f23d932b2ed34ee67687",
   "deliveryPolicy": "verified-only",
   "duplicateCollectionCount": 0,
   "failures": [
-    {
-      "reason": "Playlist response is incomplete.",
-      "resource": "playlist:RDCLAK5uy_nVQAtE2KBWk-ROQIc5o39Oup3hOLnYV0g"
-    }
+
   ],
   "halted": false,
   "homeObservedCount": 60,
   "homeOpeningMissingIDs": [
 
   ],
-  "homeVerifiedCount": 38,
+  "homeVerifiedCount": 39,
   "knownVectorCount": 33,
   "pageReadCount": 2,
   "publication": "published",
-  "refreshDueCollectionCount": 66,
+  "refreshDueCollectionCount": 63,
   "retryAfterUntil": null,
   "schemaVersion": 2,
   "topicCoverage": {
     "era:evergreen": 6,
     "genre:country": 4,
     "genre:cpop": 8,
-    "genre:electronic-dance": 7,
+    "genre:electronic-dance": 8,
     "genre:hip-hop": 5,
     "genre:indie": 4,
     "genre:jazz": 3,
@@ -39,20 +36,20 @@
     "genre:rock": 5,
     "genre:soundtrack": 1,
     "mood:chill": 3,
-    "mood:commute": 8,
+    "mood:commute": 7,
     "mood:dinner": 2,
     "mood:energy": 7,
     "mood:focus": 2,
-    "mood:good": 11,
+    "mood:good": 12,
     "mood:party": 3,
     "mood:romance": 4,
     "mood:sleep": 11,
     "mood:travel": 11
   },
-  "trackCount": 7714,
+  "trackCount": 7722,
   "unavailableCount": 0,
-  "uniqueTrackCount": 6420,
-  "upstreamFailures": 1,
-  "validatedPlaylistCount": 17,
+  "uniqueTrackCount": 6421,
+  "upstreamFailures": 0,
+  "validatedPlaylistCount": 18,
   "vectorReadCount": 2
 }
