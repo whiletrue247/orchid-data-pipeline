@@ -1,10 +1,10 @@
 {
-  "candidateCount": 1514,
+  "candidateCount": 1543,
   "changed": true,
-  "checkedAt": "2026-10-06T16:47:20Z",
+  "checkedAt": "2026-10-06T22:38:40Z",
   "collectionCount": 175,
   "contentChanged": true,
-  "contentVersion": "12111fa55d91e1751918986ab65de4ba8c822d3dcad8a385e5b47e9ebfb67a8e",
+  "contentVersion": "b6764e735bee4f34d7f74263f3ad88d48dddab73918e6b1631160dcf0fff0998",
   "deliveryPolicy": "verified-only",
   "duplicateCollectionCount": 0,
   "failures": [
@@ -15,7 +15,7 @@
   "homeOpeningMissingIDs": [
 
   ],
-  "homeVerifiedCount": 37,
+  "homeVerifiedCount": 38,
   "knownVectorCount": 33,
   "pageReadCount": 2,
   "publication": "published",
@@ -25,7 +25,7 @@
   "topicCoverage": {
     "era:evergreen": 6,
     "genre:country": 4,
-    "genre:cpop": 7,
+    "genre:cpop": 8,
     "genre:electronic-dance": 9,
     "genre:hip-hop": 6,
     "genre:indie": 4,
@@ -35,8 +35,8 @@
     "genre:pop": 7,
     "genre:rock": 5,
     "genre:soundtrack": 1,
-    "mood:chill": 5,
-    "mood:commute": 6,
+    "mood:chill": 4,
+    "mood:commute": 7,
     "mood:dinner": 2,
     "mood:energy": 7,
     "mood:focus": 2,
@@ -48,7 +48,7 @@
   },
   "trackCount": 7814,
   "unavailableCount": 0,
-  "uniqueTrackCount": 6365,
+  "uniqueTrackCount": 6362,
   "upstreamFailures": 0,
   "validatedPlaylistCount": 18,
   "vectorReadCount": 2
