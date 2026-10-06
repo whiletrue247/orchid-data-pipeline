@@ -1,10 +1,10 @@
 {
-  "candidateCount": 1521,
+  "candidateCount": 1514,
   "changed": true,
-  "checkedAt": "2026-10-06T08:57:03Z",
+  "checkedAt": "2026-10-06T16:47:20Z",
   "collectionCount": 175,
   "contentChanged": true,
-  "contentVersion": "fb705eb636d48eeac78b242dd6baf44cad0ff124bbfdb3e70ada8802c021cb70",
+  "contentVersion": "12111fa55d91e1751918986ab65de4ba8c822d3dcad8a385e5b47e9ebfb67a8e",
   "deliveryPolicy": "verified-only",
   "duplicateCollectionCount": 0,
   "failures": [
@@ -15,11 +15,11 @@
   "homeOpeningMissingIDs": [
 
   ],
-  "homeVerifiedCount": 38,
+  "homeVerifiedCount": 37,
   "knownVectorCount": 33,
   "pageReadCount": 2,
   "publication": "published",
-  "refreshDueCollectionCount": 90,
+  "refreshDueCollectionCount": 101,
   "retryAfterUntil": null,
   "schemaVersion": 2,
   "topicCoverage": {
@@ -27,12 +27,12 @@
     "genre:country": 4,
     "genre:cpop": 7,
     "genre:electronic-dance": 9,
-    "genre:hip-hop": 5,
+    "genre:hip-hop": 6,
     "genre:indie": 4,
     "genre:jazz": 3,
     "genre:jpop": 3,
     "genre:kpop": 1,
-    "genre:pop": 5,
+    "genre:pop": 7,
     "genre:rock": 5,
     "genre:soundtrack": 1,
     "mood:chill": 5,
@@ -46,9 +46,9 @@
     "mood:sleep": 11,
     "mood:travel": 11
   },
-  "trackCount": 7869,
+  "trackCount": 7814,
   "unavailableCount": 0,
-  "uniqueTrackCount": 6441,
+  "uniqueTrackCount": 6365,
   "upstreamFailures": 0,
   "validatedPlaylistCount": 18,
   "vectorReadCount": 2
