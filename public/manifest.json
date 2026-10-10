@@ -1,12 +1,12 @@
 {
   "catalog": {
-    "collectionCount": 170,
-    "path": "objects/5f4e10b786fb0da7c089228167b175f62ab606fe4eac0e5590fbd01de9b93f03.json",
-    "sha256": "5f4e10b786fb0da7c089228167b175f62ab606fe4eac0e5590fbd01de9b93f03"
+    "collectionCount": 166,
+    "path": "objects/048a5399c909b86be2a6f2be4b8a3fcccf9c8c24d97c33f56c448c4fc0b5e440.json",
+    "sha256": "048a5399c909b86be2a6f2be4b8a3fcccf9c8c24d97c33f56c448c4fc0b5e440"
   },
-  "contentVersion": "5f4e10b786fb0da7c089228167b175f62ab606fe4eac0e5590fbd01de9b93f03",
+  "contentVersion": "048a5399c909b86be2a6f2be4b8a3fcccf9c8c24d97c33f56c448c4fc0b5e440",
   "deliveryPolicy": "verified-only",
-  "generatedAt": "2026-10-09T22:36:01Z",
+  "generatedAt": "2026-10-10T05:47:32Z",
   "region": {
     "languageTag": "zh-TW",
     "regionCode": "TW"
