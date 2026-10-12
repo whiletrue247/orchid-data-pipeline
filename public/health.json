@@ -1,24 +1,21 @@
 {
-  "candidateCount": 1523,
+  "candidateCount": 1530,
   "changed": true,
-  "checkedAt": "2026-10-12T15:16:41Z",
+  "checkedAt": "2026-10-12T22:56:45Z",
   "collectionCount": 152,
   "contentChanged": true,
-  "contentVersion": "2827090a3221d00890dbde7e4a5b9a4fc183a8689d58c3cca8dc68e0b9cfc8c6",
+  "contentVersion": "aa60fbede8d3ea8ef0c346b14c35fceaaa0ec3cf4a277086bf0ababe44fcab10",
   "deliveryPolicy": "verified-only",
   "duplicateCollectionCount": 0,
   "failures": [
-    {
-      "reason": "Playlist response is incomplete.",
-      "resource": "playlist:RDCLAK5uy_njdy_HiubBudgweb1_0Ld1xQ52shJ8uHk"
-    }
+
   ],
   "halted": false,
   "homeObservedCount": 60,
   "homeOpeningMissingIDs": [
 
   ],
-  "homeVerifiedCount": 38,
+  "homeVerifiedCount": 39,
   "knownVectorCount": 33,
   "pageReadCount": 2,
   "publication": "published",
@@ -28,9 +25,9 @@
   "topicCoverage": {
     "era:evergreen": 6,
     "genre:country": 4,
-    "genre:cpop": 9,
+    "genre:cpop": 8,
     "genre:electronic-dance": 2,
-    "genre:hip-hop": 1,
+    "genre:hip-hop": 2,
     "genre:indie": 1,
     "genre:jazz": 3,
     "genre:jpop": 3,
@@ -38,8 +35,8 @@
     "genre:pop": 9,
     "genre:rock": 5,
     "genre:soundtrack": 1,
-    "mood:chill": 5,
-    "mood:commute": 6,
+    "mood:chill": 3,
+    "mood:commute": 3,
     "mood:dinner": 2,
     "mood:energy": 4,
     "mood:focus": 6,
@@ -49,10 +46,10 @@
     "mood:sleep": 1,
     "mood:workout": 1
   },
-  "trackCount": 7150,
+  "trackCount": 7097,
   "unavailableCount": 0,
-  "uniqueTrackCount": 5825,
-  "upstreamFailures": 1,
-  "validatedPlaylistCount": 17,
+  "uniqueTrackCount": 5794,
+  "upstreamFailures": 0,
+  "validatedPlaylistCount": 18,
   "vectorReadCount": 2
 }
