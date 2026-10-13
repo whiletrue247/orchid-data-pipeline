@@ -1,10 +1,10 @@
 {
-  "candidateCount": 1548,
+  "candidateCount": 1529,
   "changed": true,
-  "checkedAt": "2026-10-13T06:45:08Z",
-  "collectionCount": 153,
+  "checkedAt": "2026-10-13T15:56:08Z",
+  "collectionCount": 154,
   "contentChanged": true,
-  "contentVersion": "60ac180851ed0ad9f146889069d75f0aee121eda50b7d57b817a430cacb141a2",
+  "contentVersion": "dfc211b2018fa5b7666d016243aedcd12862cc8358ed58a36848884c2578cc01",
   "deliveryPolicy": "verified-only",
   "duplicateCollectionCount": 0,
   "failures": [
@@ -25,7 +25,7 @@
   "topicCoverage": {
     "era:evergreen": 6,
     "genre:country": 4,
-    "genre:cpop": 10,
+    "genre:cpop": 9,
     "genre:electronic-dance": 2,
     "genre:hip-hop": 1,
     "genre:indie": 2,
@@ -40,15 +40,16 @@
     "mood:dinner": 2,
     "mood:energy": 3,
     "mood:focus": 6,
-    "mood:good": 5,
+    "mood:good": 6,
     "mood:party": 2,
     "mood:romance": 2,
     "mood:sleep": 8,
+    "mood:travel": 6,
     "mood:workout": 1
   },
-  "trackCount": 7111,
+  "trackCount": 7136,
   "unavailableCount": 0,
-  "uniqueTrackCount": 5796,
+  "uniqueTrackCount": 5809,
   "upstreamFailures": 0,
   "validatedPlaylistCount": 18,
   "vectorReadCount": 2
