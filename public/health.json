@@ -1,10 +1,10 @@
 {
-  "candidateCount": 1524,
+  "candidateCount": 1537,
   "changed": true,
-  "checkedAt": "2026-10-15T11:23:17Z",
+  "checkedAt": "2026-10-15T16:57:14Z",
   "collectionCount": 156,
   "contentChanged": true,
-  "contentVersion": "97f5b4f424c93785d6609e6e55d9a5c74fb29b93c8c7e447de2ba83405ac10ba",
+  "contentVersion": "c034a541fd2ae281507d3275fde8f5231ef3cdf2a72b2e40858f850c8aa53361",
   "deliveryPolicy": "verified-only",
   "duplicateCollectionCount": 0,
   "failures": [
@@ -15,19 +15,19 @@
   "homeOpeningMissingIDs": [
 
   ],
-  "homeVerifiedCount": 37,
+  "homeVerifiedCount": 39,
   "knownVectorCount": 33,
   "pageReadCount": 2,
   "publication": "published",
-  "refreshDueCollectionCount": 66,
+  "refreshDueCollectionCount": 58,
   "retryAfterUntil": null,
   "schemaVersion": 2,
   "topicCoverage": {
     "era:evergreen": 6,
     "genre:country": 4,
-    "genre:cpop": 10,
+    "genre:cpop": 8,
     "genre:electronic-dance": 2,
-    "genre:hip-hop": 1,
+    "genre:hip-hop": 3,
     "genre:indie": 2,
     "genre:jazz": 3,
     "genre:jpop": 3,
@@ -36,7 +36,7 @@
     "genre:rock": 5,
     "genre:soundtrack": 1,
     "mood:chill": 3,
-    "mood:commute": 2,
+    "mood:commute": 3,
     "mood:dinner": 2,
     "mood:energy": 3,
     "mood:focus": 6,
@@ -47,9 +47,9 @@
     "mood:travel": 6,
     "mood:workout": 1
   },
-  "trackCount": 7293,
+  "trackCount": 7282,
   "unavailableCount": 0,
-  "uniqueTrackCount": 5961,
+  "uniqueTrackCount": 5949,
   "upstreamFailures": 0,
   "validatedPlaylistCount": 18,
   "vectorReadCount": 2
