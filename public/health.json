@@ -1,31 +1,34 @@
 {
-  "candidateCount": 1516,
+  "candidateCount": 1521,
   "changed": true,
-  "checkedAt": "2026-10-17T12:10:27Z",
+  "checkedAt": "2026-10-17T15:30:18Z",
   "collectionCount": 159,
   "contentChanged": true,
-  "contentVersion": "ce9648bd28eecee6f5d5fed66e6efee0211bb475d61275cffa494e577873a3c1",
+  "contentVersion": "a69b619eac5b695525522d080720d8b84c969a93fe89fd8ce55207c2769ea9bd",
   "deliveryPolicy": "verified-only",
   "duplicateCollectionCount": 0,
   "failures": [
-
+    {
+      "reason": "Playlist response is incomplete.",
+      "resource": "playlist:RD6ynFpgJG43k"
+    }
   ],
   "halted": false,
   "homeObservedCount": 60,
   "homeOpeningMissingIDs": [
 
   ],
-  "homeVerifiedCount": 38,
+  "homeVerifiedCount": 37,
   "knownVectorCount": 33,
   "pageReadCount": 2,
   "publication": "published",
-  "refreshDueCollectionCount": 53,
+  "refreshDueCollectionCount": 52,
   "retryAfterUntil": null,
   "schemaVersion": 2,
   "topicCoverage": {
     "era:evergreen": 6,
     "genre:country": 4,
-    "genre:cpop": 10,
+    "genre:cpop": 11,
     "genre:electronic-dance": 2,
     "genre:hip-hop": 2,
     "genre:indie": 2,
@@ -36,21 +39,21 @@
     "genre:rock": 5,
     "genre:soundtrack": 1,
     "mood:chill": 3,
-    "mood:commute": 3,
+    "mood:commute": 2,
     "mood:dinner": 2,
     "mood:energy": 2,
     "mood:focus": 7,
-    "mood:good": 5,
+    "mood:good": 6,
     "mood:party": 3,
     "mood:romance": 2,
     "mood:sleep": 9,
     "mood:travel": 6,
     "mood:workout": 1
   },
-  "trackCount": 7446,
+  "trackCount": 7440,
   "unavailableCount": 0,
-  "uniqueTrackCount": 6123,
-  "upstreamFailures": 0,
-  "validatedPlaylistCount": 18,
+  "uniqueTrackCount": 6116,
+  "upstreamFailures": 1,
+  "validatedPlaylistCount": 17,
   "vectorReadCount": 2
 }
