@@ -1,10 +1,10 @@
 {
-  "candidateCount": 1547,
+  "candidateCount": 1500,
   "changed": true,
-  "checkedAt": "2026-10-17T22:16:23Z",
-  "collectionCount": 163,
+  "checkedAt": "2026-10-18T00:04:01Z",
+  "collectionCount": 162,
   "contentChanged": true,
-  "contentVersion": "94464871883c23b1017c58146706f42d600b82e42a758852146450ec6b6a6cea",
+  "contentVersion": "083209e7d0aa94c68439538743753fe1c827e97598cc2ad298e98fb14d0fb78e",
   "deliveryPolicy": "verified-only",
   "duplicateCollectionCount": 0,
   "failures": [
@@ -17,11 +17,12 @@
   ],
   "homeVerifiedCount": 37,
   "knownVectorCount": 33,
-  "pageReadCount": 2,
+  "pageReadCount": 0,
   "publication": "published",
-  "refreshDueCollectionCount": 50,
+  "refreshDueCollectionCount": 49,
   "retryAfterUntil": null,
   "schemaVersion": 2,
+  "syncDeferredUntil": "2026-10-18T00:15:40Z",
   "topicCoverage": {
     "era:evergreen": 6,
     "genre:country": 4,
@@ -47,10 +48,10 @@
     "mood:travel": 6,
     "mood:workout": 1
   },
-  "trackCount": 7717,
+  "trackCount": 7653,
   "unavailableCount": 0,
-  "uniqueTrackCount": 6377,
+  "uniqueTrackCount": 6328,
   "upstreamFailures": 0,
-  "validatedPlaylistCount": 18,
-  "vectorReadCount": 2
+  "validatedPlaylistCount": 0,
+  "vectorReadCount": 0
 }
