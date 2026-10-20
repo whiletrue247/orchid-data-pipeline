@@ -1,5 +1,20 @@
 # Orchid Discovery
 
+## Retired from the app data loop — 2026-10-20
+
+The owner requested removal of GitHub Actions from music data acquisition. The
+Orchid Catalog workflow is disabled and its definition has been removed. There
+is no recurring refresh or publication from this repository. Existing Pages
+objects are historical snapshots and must not be treated as a current catalog.
+
+Music 日常 build 22 reads MBPlayer on demand and uses validated device-local
+metadata during temporary failures. It no longer requests this repository's
+manifest, catalog or track objects. Playback resolution remains on the device.
+The code and contract below are retained as historical reference, not an active
+production service. No replacement cloud scheduler has been created.
+
+---
+
 Music 日常's metadata supply, maintained on **whiletrue247**. Version 4 preserves
 MBPlayer Home's music shelves and ordering, and treats the published catalog as a
 verified fallback rather than the entire available inventory.
